@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="33px" height="31px" viewBox="0 0 33 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Socials</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="footer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1262.000000, -170.000000)">
+        <g id="Group-18" fill="#677897">
+            <g id="Group-11" transform="translate(151.000000, 43.000000)">
+                <g id="Footer" transform="translate(261.000000, 0.000000)">
+                    <g id="Socials" transform="translate(850.000000, 127.000000)">
+                        <g id="Facebook">
+                            <path d="M0,15.5 C0,6.93958595 7.38730118,0 16.5,0 C25.6126988,0 33,6.93958595 33,15.5 C33,24.060414 25.6126988,31 16.5,31 C7.38730118,31 0,24.060414 0,15.5 Z M17.6698191,24.0969954 L17.6698191,15.664177 L20.1478282,15.664177 L20.4762179,12.7581811 L17.6698191,12.7581811 L17.6740292,11.3037022 C17.6740292,10.5457737 17.7506886,10.1396583 18.9095253,10.1396583 L20.4586757,10.1396583 L20.4586757,7.23333333 L17.9803158,7.23333333 C15.003407,7.23333333 13.9556123,8.64305399 13.9556123,11.0137608 L13.9556123,12.7585102 L12.1,12.7585102 L12.1,15.6645061 L13.9556123,15.6645061 L13.9556123,24.0969954 L17.6698191,24.0969954 Z" id="Combined-Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

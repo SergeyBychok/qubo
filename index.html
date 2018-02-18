@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/resset-v2.css">
+    <link rel="stylesheet" href="js/jquery-nice-select-1.1.0/css/nice-select.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+<header>
+    <div class="content">
+        <img src="images/logo.svg" alt="" class="header-logo">
+        <ul class="menu__list">
+            <li class="menu__item">
+                <a href="" class="menu__link">
+                    Home
+                </a>
+            </li>
+            <li class="menu__item">
+                <a href="" class="menu__link">
+                    Value
+                </a>
+            </li>
+            <li class="menu__item">
+                <a href="" class="menu__link">
+                    Our Team
+                </a>
+            </li>
+            <li class="menu__item">
+                <a href="" class="menu__link">
+                    Solution
+                </a>
+            </li>
+            <li class="menu__item">
+                <a href="" class="menu__link">
+                    Blog
+                </a>
+            </li>
+            <li class="menu__item">
+                <a href="" class="menu__link">
+                    Contacts
+                </a>
+            </li>
+            <li class="menu__item">
+                <a href="" class="menu__link">
+                    En
+                </a>
+            </li>
+        </ul>
+    </div>
+</header>
+<section class="b_main" id="particles-js">
+    <div class="content">
+        <img src="images/logo.svg" class="mail__logo">
+        <h1 class="main__title">Digital partner for productivity</h1>
+        <p class="main__text">
+            QUBO is an enterprise AI platform for conversation interaction with digital world and
+            automated resolution of user requests
+        </p>
+        <div class="chat__wrap clearfix">
+            <div class="chat__item--qubo">
+                <img class="chat__pic" src="images/logo_small.svg" alt="">
+                <div class="chat__text">
+
+                </div>
+            </div>
+            <div class="chat__item--user"></div>
+        </div>
+        <div class="main__video-block">
+            <a href="" class="main__video-link">
+                <span class="main__video-link--text">How it works?</span>
+                <img src="images/play-icon.svg">
+            </a>
+        </div>
+    </div>
+</section>
+<section class="b_value">
+    <div class="content">
+        <div class="value__cols">
+            <div class="value__col">
+                <img src="images/man.svg" alt="">
+            </div>
+            <div class="value__col animate">
+                <h2 class="value__title">QUBO Value</h2>
+                <p class="value__sub-title">
+                    QUBO provides employees with ability to innovate, instead of living in "keeping the lights on" mode.
+                    People can focus themselves on solving complex business challenges instead of dealing with numerous
+                    complexities of enterprise software. QUBO advantages:
+                </p>
+                <ul class="value__list">
+                    <li class="value__item">
+                        <img src="images/val-1.svg" alt="" class="value__svg">
+                        <p class="value__text">
+                            Easy to deploy
+                        </p>
+                    </li>
+                    <li class="value__item">
+                        <img src="images/val-2.svg" alt="" class="value__svg">
+                        <p class="value__text">
+                            Seamless integration with corporate landscape
+                        </p>
+                    </li>
+                    <li class="value__item">
+                        <img src="images/val-3.svg" alt="" class="value__svg">
+                        <p class="value__text">
+                            Knowledge base with effective solution mechanism
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="b_calculate">
+    <div class="content">
+        <ul class="tabs__control first animate">
+            <li class="tabs__control--item first">Business</li>
+            <li class="tabs__control--item second">Individual</li>
+        </ul>
+        <p class="calculate__text animate">
+            Introducing QUBO to your landscape will generate quick wins and tangible benefits from time savings and
+            overall increase in productivity
+        </p>
+        <div class="calculate__wrap calculate__wrap--first animate">
+            <div class="calculate__cols">
+                <div class="calculate__col">
+                    <select>
+                        <option disabled>Choose your country</option>
+                        <option value="">Чебурашка</option>
+                        <option selected value="">Чебурашка</option>
+                        <option value="">Чебурашка</option>
+                        <option value="">Чебурашка</option>
+                    </select>
+                </div>
+                <div class="calculate__col">
+                    <select name="" id="we">
+                        <options>Choose your country</options>
+                        <options></options>
+                    </select>
+                </div>
+            </div>
+            <p class="calculate__title">% of activities per week</p>
+            <div class="calculate__range-wrap">
+                <div class="outWrap_0">
+                    <output id="rangeout_0">1</output>
+                    %
+                    <span>Management</span>
+                </div>
+                <div class="outWrap_1">
+                    <span>Expertise</span>
+                    <output id="rangeout_1">6</output>
+                    %
+                </div>
+                <div class="outWrap_2">
+                    <output id="rangeout_2">21</output>
+                    %
+                    <span>Interface</span>
+                </div>
+                <div class="outWrap_3">
+                    <span>Collect Data</span>
+                    <output id="rangeout_3">36</output>
+                    %
+                </div>
+                <div class="outWrap_4">
+                    <output id="rangeout_4">51</output>
+                    %
+                    <span>Process Data</span>
+                </div>
+                <div class="outWrap_5">
+                    <span>Physical</span>
+                    <output id="rangeout_5">67</output>
+                    %
+                </div>
+                <div id="range-container"></div>
+            </div>
+            <p class="calculate__result-title">Results</p>
+            <p class="calculate__result">Saving <span id="result">X</span> hours per a week</p>
+        </div>
+        <div class="calculate__wrap calculate__wrap--second" style="display: none">
+            <div class="calculate__cols">
+                <div class="calculate__col">
+                    <form class="form__salary">
+                        <input class="range-secondary" type="range" name="salary" min="0" max="20" value="5"
+                               oninput="this.form.salaryOutput.value=this.value"/>
+                        <output name="salaryOutput" min="0" max="20" value="0"
+                                oninput="this.form.salary.value=this.value"></output>
+                        <p>Average annual salary</p>
+                    </form>
+                    <form class="form__employees">
+                        <input class="range-secondary" type="range" name="salary" min="0" max="20" value="10"
+                               oninput="this.form.salaryOutput.value=this.value"/>
+                        <output name="salaryOutput" min="0" max="20" value="0"
+                                oninput="this.form.salary.value=this.value"></output>
+                        <p>Employees number</p>
+                    </form>
+                </div>
+                <div class="calculate__col">
+                    <select name="">
+                        <options>Choose your country</options>
+                        <options></options>
+                    </select>
+                </div>
+            </div>
+            <div class="saving__block">
+                <p class="saving__title">Potential annual savings, USD</p>
+                <p class="line-right"><span class="saving__text">Optimistic</span><span class="saving__result opt">$ 100 000</span>
+                </p>
+                <div class="saving-bar">
+                    <span style="width: 20%"></span>
+                </div>
+                <p><span class="saving__text">Pessimistic</span><span class="saving__result">$ 100 000</span></p>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="b_architecture">
+    <div class="content animate">
+        <h2 class="architecture__title">
+            QUBO architecture
+        </h2>
+
+
+        <p class="architecture__sub-title">
+            QUBO is designed for easy deployment and seamless integration in any environment. Micro-services
+            architecture provides business agility and optimal Total Cost of ownership
+        </p>
+
+        <div class="architecture__users"><img src="images/men.svg" width="204" height="153"></div>
+        <p class="architecture__users--text">User requests</p>
+
+        <div class="architecture__arrows">
+            <img src="images/arch-arrow.svg">
+            <img src="images/arch-arrow.svg">
+        </div>
+
+        <div class="architecture__graph"></div>
+        <div class="architecture__session"><img src="images/session-icon.svg"></div>
+        <div class="architecture__session--text">Session</div>
+
+
+        <div class="architecture__detection--text">Detection</div>
+        <div class="architecture__clarification--text">Clarification</div>
+        <div class="architecture__core--text">Core</div>
+        <div class="architecture__core--sub-text">Detect user issue</div>
+
+        <div class="architecture__execution--text">Execution</div>
+
+        <div class="architecture__solution--text">Solution</div>
+        <div class="architecture__brain"><img src="images/brain.svg"></div>
+
+        <div class="architecture__laptop"><img src="images/laptop.svg"></div>
+
+        <p class="architecture__network--text">Network of agents</p>
+        <p class="architecture__network--sub-text">Execute functions and procedures in business applications</p>
+
+    </div>
+</section>
+<section class="b_team">
+    <div class="content">
+        <h2 class="section__title animate">
+            Team
+        </h2>
+        <ul class="team__list">
+            <li class="team__item animate">
+                <img
+                        src="images/team/Mykola-Sapuntsov.jpg"
+                        srcset="images/team/Mykola-Sapuntsov@2x.jpg 2x"
+                        class="team__pic"
+                        alt="Mykola Sapuntsov"
+                >
+
+                <p class="team__name">Mykola Sapuntsov</p>
+                <p class="team__position">Chief Technology Officer</p>
+            </li>
+            <li class="team__item animate">
+                <img
+                        src="images/team/Sergiy-Nosenko.jpg"
+                        srcset="images/team/Sergiy-Nosenko@2x.jpg 2x"
+                        class="team__pic"
+                        alt="Sergiy Nosenko"
+                >
+
+                <p class="team__name">Sergiy Nosenko</p>
+                <p class="team__position">Chief software architect</p>
+            </li>
+
+
+            <li class="team__item animate">
+                <img
+                        src="images/team/Olga-Vasilyeva.jpg"
+                        srcset="images/team/Olga-Vasilyeva@2x.jpg 2x"
+                        class="team__pic"
+                        alt="Olga Vasilyeva"
+                >
+                <p class="team__name">Olga Vasilyeva</p>
+                <p class="team__position">Marketing manager</p>
+            </li>
+            <li class="team__item animate">
+                <img
+                        src="images/team/Zoya-Mikashevskaya.jpg"
+                        srcset="images/team/Zoya-Mikashevskaya@2x.jpg 2x"
+                        class="team__pic"
+                        alt="Zoya Mikashevskaya"
+                >
+                <p class="team__name">Zoya Mikashevskaya</p>
+                <p class="team__position">Project manager</p>
+            </li>
+
+
+            <li class="team__item animate">
+                <img
+                        src="images/team/Sergiy-Lomov.jpg"
+                        srcset="images/team/Sergiy-Lomov@2x.jpg 2x"
+                        class="team__pic"
+                        alt="Sergiy Lomov"
+                >
+                <p class="team__name">Sergiy Lomov</p>
+                <p class="team__position">SAP products administrator</p>
+            </li>
+
+
+            <li class="team__item animate">
+                <img
+                        src="images/team/Yuriy-Nevmezhitskiy.jpg"
+                        srcset="images/team/Yuriy-Nevmezhitskiy@2x.jpg 2x"
+                        class="team__pic"
+                        alt="Yuriy Nevmezhitskiy"
+                >
+                <p class="team__name">Yuriy Nevmezhitskiy</p>
+                <p class="team__position">JavaScript developer</p>
+            </li>
+
+
+            <li class="team__item animate">
+                <img
+                        src="images/team/Eduard-Varvarov.jpg"
+                        srcset="images/team/Eduard-Varvarov@2x.jpg 2x"
+                        class="team__pic"
+                        alt="Eduard Varvarov"
+                >
+                <p class="team__name">Eduard Varvarov</p>
+                <p class="team__position">JavaScript developer</p>
+            </li>
+
+
+            <li class="team__item animate">
+                <img
+                        src="images/team/Vladislav-Zhovtyi.jpg"
+                        srcset="images/team/Vladislav-Zhovtyi@2x.jpg 2x"
+                        class="team__pic"
+                        alt="Vladislav Zhovtyi"
+                >
+                <p class="team__name">Vladislav Zhovtyi</p>
+                <p class="team__position">Team leader</p>
+            </li>
+
+
+            <li class="team__item animate">
+                <img
+                        src="images/team/Yuriy-Haideichuk.jpg"
+                        srcset="images/team/Yuriy-Haideichuk@2x.jpg 2x"
+                        class="team__pic"
+                        alt="Yuriy Haideichuk"
+                >
+                <p class="team__name">Yuriy Haideichuk</p>
+                <p class="team__position">Web/ JavaScript developer</p>
+            </li>
+
+
+            <li class="team__item animate">
+                <img
+                        src="images/team/Vladyslav-Kozachenko.jpg"
+                        srcset="images/team/Vladyslav-Kozachenko@2x.jpg 2x"
+                        class="team__pic"
+                        alt="Vladyslav Kozachenko"
+                >
+                <p class="team__name">Vladyslav Kozachenko</p>
+                <p class="team__position">QA engineer</p>
+            </li>
+
+
+            <li class="team__item animate">
+                <img
+                        src="images/team/Dmytro-Zhurbenko.jpg"
+                        srcset="images/team/Dmytro-Zhurbenko@2x.jpg 2x"
+                        class="team__pic"
+                        alt="Dmytro Zhurbenko"
+                >
+                <p class="team__name">Dmytro Zhurbenko</p>
+                <p class="team__position">ABAP developer</p>
+            </li>
+
+            <li class="team__item animate">
+                <img
+                        src="images/team/Boris-Lymar.jpg"
+                        srcset="images/team/Boris-Lymar@2x.jpg 2x"
+                        class="team__pic"
+                        alt="Boris Lymar"
+                >
+                <p class="team__name">Boris Lymar</p>
+                <p class="team__position">JavaScript, Node.JS developer</p>
+            </li>
+
+        </ul>
+        <div class="btn-wrap animate">
+            <a href="" class="team__btn">
+                Get Started
+            </a>
+        </div>
+    </div>
+</section>
+<section class="b_blog">
+    <div class="content">
+        <h2 class="section__title animate">
+            Blog
+        </h2>
+        <ul class="blog__list animate">
+            <li class="blog__item">
+                <img src="" alt="">
+            </li>
+            <li class="blog__item">
+                <img src="" alt="">
+            </li>
+            <li class="blog__item">
+                <img src="" alt="">
+            </li>
+
+        </ul>
+        <div class="btn-wrap">
+            <a href="" class="blog__btn">
+                View all
+            </a>
+        </div>
+    </div>
+</section>
+<footer class="animate">
+    <div class="content">
+        <div class="footer__cols">
+            <div class="footer__col--big">
+                <img src="images/logo-footer.svg" alt="" class="footer__logo">
+                <ul class="footer__menu">
+                    <li class="footer__menu-item">
+                        <a href="" class="footer__menu-link">
+                            Home
+                        </a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="" class="footer__menu-link">
+                            Benefits
+                        </a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="" class="footer__menu-link">
+                            Solution
+                        </a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="" class="footer__menu-link">
+                            Our Team
+                        </a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="" class="footer__menu-link">
+                            Concept
+                        </a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="" class="footer__menu-link">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="" class="footer__menu-link">
+                            Contacts
+                        </a>
+                    </li>
+
+                </ul>
+                <ul class="footer__menu">
+                    <li class="footer__menu-item">
+                        <a href="" class="footer__menu-link footer__menu-link--primary">
+                            Terms & Conditions
+                        </a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="" class="footer__menu-link footer__menu-link--primary">
+                            Privacy policy
+                        </a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="" class="footer__menu-link footer__menu-link--primary">
+                            Support
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__col--small">
+                <ul class="soc__list">
+                    <li class="soc__item">
+                        <a href="" class="soc__link soc__link--fb">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33" height="31" viewBox="0 0 33 31">
+                                <g fill="none">
+                                    <g fill="#677897">
+                                        <path d="M0 15.5C0 6.9 7.4 0 16.5 0 25.6 0 33 6.9 33 15.5 33 24.1 25.6 31 16.5 31 7.4 31 0 24.1 0 15.5ZM17.7 24.1L17.7 15.7 20.1 15.7 20.5 12.8 17.7 12.8 17.7 11.3C17.7 10.5 17.8 10.1 18.9 10.1L20.5 10.1 20.5 7.2 18 7.2C15 7.2 14 8.6 14 11L14 12.8 12.1 12.8 12.1 15.7 14 15.7 14 24.1 17.7 24.1Z"/>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/Particles.js"></script>
+<script src="js/jquery.viewportchecker.js"></script>
+<script src="js/typed.js-master/lib/typed.min.js"></script>
+<script src="js/jquery-nice-select-1.1.0/js/jquery.nice-select.js"></script>
+
+<script src="js/scripts.js"></script>
+</html>

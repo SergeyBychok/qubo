@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="111px" height="15px" viewBox="0 0 111 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="White-Landing--Copy-7" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-469.000000, -2814.000000)">
+        <g id="Group-16" transform="translate(-264.000000, 2290.000000)">
+            <g id="Group-12">
+                <g id="Group-13">
+                    <g id="Group-4" transform="translate(735.000000, 524.000000)">
+                        <g>
+                            <path d="M0.325301205,7.5 L99.4306503,7.5" id="Line" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square" stroke-linejoin="bevel" stroke-dasharray="5,5"></path>
+                            <polygon id="Star-Copy" fill="#FFFFFF" transform="translate(101.992470, 7.500000) scale(-1, 1) rotate(-90.000000) translate(-101.992470, -7.500000) " points="101.99247 13.875 94.9494922 13.875 98.470981 7.5 101.99247 1.125 105.513959 7.5 109.035448 13.875"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

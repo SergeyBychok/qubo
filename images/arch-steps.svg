@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="539px" height="571px" viewBox="0 0 539 571" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="98.2621173%" id="linearGradient-1">
+            <stop stop-color="#168FFA" offset="0%"></stop>
+            <stop stop-color="#036DD5" offset="100%"></stop>
+        </linearGradient>
+        <ellipse id="path-2" cx="385.108696" cy="110.036555" rx="109.891304" ry="110.036555"></ellipse>
+        <filter x="-30.7%" y="-30.7%" width="161.4%" height="161.3%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="22.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="arch-graph" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(0.000000, 44.000000)">
+        <g id="Group">
+            <path d="M267.28176,301.974881 L255.507077,301.974881 C255.507077,301.974881 207.730129,298.241557 207.730129,337.273367 C207.730129,376.305178 207.730129,603.810801 207.730129,603.810801" id="Path-17-Copy-2" stroke="#A8D1F8" stroke-width="48" transform="translate(237.505944, 452.844708) rotate(-90.000000) translate(-237.505944, -452.844708) "></path>
+            <ellipse id="Oval" fill="url(#linearGradient-1)" cx="403.043478" cy="434.921933" rx="91.9565217" ry="92.0780669"></ellipse>
+            <path d="M243.327106,163.355249 L195.168253,163.355249 C195.168253,163.355249 147.391304,159.621925 147.391304,198.653735 L147.391304,248.882609" id="Path-17-Copy" stroke="#4DA5E4" stroke-width="48"></path>
+            <ellipse id="Oval-Copy" fill="url(#linearGradient-1)" cx="90.326087" cy="284.39715" rx="90.326087" ry="90.4454771"></ellipse>
+            <path d="M331.602412,59.5225355 L137.776948,59.5225355 C137.776948,59.5225355 90,55.7892109 90,94.8210217 L90,145.049895" id="Path-17" stroke="#4DA5E4" stroke-width="48"></path>
+            <path d="M403.695652,193.951673 L403.695652,310.413389" id="Path-17-Copy-3" stroke="#A8D1F8" stroke-width="48"></path>
+            <polygon id="Star-Copy" fill="#4DA5E4" transform="translate(89.753334, 162.605948) rotate(-180.000000) translate(-89.753334, -162.605948) " points="89.7533337 180.34303 50.2173913 180.890954 70.8739057 162.87991 89.7533337 144.320942 108.632762 162.87991 129.289276 180.890954"></polygon>
+            <polygon id="Star-Copy-4" fill="#A8D1F8" transform="translate(404.101160, 318.028501) rotate(-180.000000) translate(-404.101160, -318.028501) " points="404.10116 335.765583 364.565217 336.313507 385.221732 318.302463 404.10116 299.743494 422.980588 318.302463 443.637102 336.313507"></polygon>
+            <polygon id="Star-Copy-3" fill="#A8D1F8" transform="translate(86.144638, 415.902107) scale(1, -1) rotate(-180.000000) translate(-86.144638, -415.902107) " points="86.144638 433.639189 46.6086957 434.187113 67.2652101 416.176069 86.144638 397.6171 105.024066 416.176069 125.68058 434.187113"></polygon>
+            <polygon id="Star-Copy-2" fill="#4DA5E4" transform="translate(260.869565, 162.358956) rotate(90.000000) translate(-260.869565, -162.358956) " points="260.869565 180.096038 221.333623 180.643962 241.990137 162.632918 260.869565 144.073949 279.748993 162.632918 300.405508 180.643962"></polygon>
+            <g id="Oval-Copy-2">
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+            </g>
+        </g>
+    </g>
+</svg>
