@@ -9,6 +9,7 @@ body
 
 .content
   width: 1180px
+  width: 980px
   margin: 0 auto
   font-family 'Lato', sans-serif
 
@@ -58,6 +59,7 @@ header
 
 .b_main
   text-align center
+  background-color #046fd7
   background-image url("../images/bg.jpg")
   background-repeat: no-repeat
   background-position: left top
@@ -507,9 +509,37 @@ canvas
 
 
 .showBlock
-  animation: opacity .2s forwards
+  transform translateY(60px);
+  opacity: 0;
+  animation: showBlock .3s forwards
 
 
+@keyframes showBlock {
+  0% {
+    opacity: 0;
+    transform translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform translateY(0px);
+  }
+}
+
+//body.open-modal
+//  overflow hidden
+//.modal__video
+//  display: none
+//  width: 100vw
+//  height: 100vh
+//  position: fixed
+//  top: 0
+//  left: 0
+//  background-color rgba(15, 46, 107, 0.56)
+//  z-index 9999999
+//  display: flex
+//  justify-content center
+//  align-items center
+//  overflow-y scroll
 
 
 

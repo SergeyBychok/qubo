@@ -225,9 +225,9 @@ $(document).ready(function () {
                 console.log('checkIfHasMove', nValue)
                 $(this).val(nValue)
             }
-            changeVal(id)
 
-            console.log('direction', direction, id)
+            // console.log('direction', direction, id)
+            changeVal(id)
             if (direction == "right") {
                 sinbling = $("#range" + (++id));
             } else {
@@ -284,12 +284,25 @@ $(document).ready(function () {
         classToAdd: 'showBlock',
         offset: 230
     });
+
+    body.on('click', '.main__video-link', function () {
+        $('.modal__video').show();
+        return false
+    })
 })
 
 
 function changeVal(id) {
+    id = +id
     var that = $(".outWrap_" + id)
-    that.css({left: that.find('output').text() + "%"})
+    var rangeVal = $("#range" + id).val()
+
+    var beforeVal = +$("#range" + (id - 1)).val() || 0
+    var nextVal = +$("#range" + (id + 1)).val() || 0
+
+    $("#rangeout_" + (id + 1)).text(Math.round(nextVal - rangeVal))
+    that.find('output').text(Math.round(rangeVal - beforeVal))
+    that.css({left: rangeVal + "%"})
 }
 
 new Typed('.chat__text', {
