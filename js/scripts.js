@@ -271,9 +271,9 @@ $(document).ready(function () {
         var percent = this.value * 100 / (this.max - this.min)
         $(this).next('output').css({left: percent + '%'})
     })
-    $(window).on('scroll', function() {
+    $(window).on('scroll', function () {
         console.log(window.scrollY);
-        if(window.scrollY > 100){
+        if (window.scrollY > 100) {
             $('header').addClass('bg');
         } else {
             $('header').removeClass('bg');
@@ -289,7 +289,42 @@ $(document).ready(function () {
         $('.modal__video').show();
         return false
     })
+    body.on('change', 'select', function () {
+        formula()
+    })
 })
+var industry = {
+    accommodations: {management: 30, expertise: 40, interface: 50, collect: 80, process: 90},
+    manufacturing: {management: 10, expertise: 20, interface: 20, collect: 80, process: 70},
+    agriculture: {management: 10, expertise: 40, interface: 40, collect: 90, process: 80},
+    transportation: {management: 30, expertise: 40, interface: 40, collect: 80, process: 90},
+    mining: {management: 10, expertise: 50, interface: 10, collect: 80, process: 80},
+    construction: {management: 20, expertise: 30, interface: 30, collect: 80, process: 70},
+    utilities: {management: 10, expertise: 20, interface: 30, collect: 80, process: 80},
+    wholesale: {management: 10, expertise: 20, interface: 20, collect: 80, process: 70},
+    retail: {management: 10, expertise: 30, interface: 20, collect: 80, process: 70},
+    health: {management: 10, expertise: 20, interface: 20, collect: 60, process: 80},
+    finance: {management: 10, expertise: 30, interface: 30, collect: 70, process: 80},
+    real: {management: 10, expertise: 20, interface: 20, collect: 60, process: 80}
+}
+
+var formula = function () {
+    var item = document.getElementById('industry').value
+    var countryEl = document.getElementById('country')
+
+    if (!industry[item] || countryEl.value.length !== 1) return false
+    var obj = industry[item]
+    var VALmanagement = Number(document.getElementById('range0').value)
+    var VALexpiriance = Number(document.getElementById('range1').value)
+    var VALinterface = Number(document.getElementById('range2').value)
+    var VALcollect = Number(document.getElementById('range3').value)
+    var VALprocess = Number(document.getElementById('range4').value)
+    var res = ((VALmanagement) * obj.management * 30 + (VALexpiriance) * obj.expertise * 50 + (VALinterface) * obj.interface * 25 + (VALcollect) * obj.collect * 20 + (VALprocess) * obj.process * 30) * 0.000040
+    if (countryEl.value.length == 1 && countryEl.value == 1) {
+        res = 0.7 * res;
+    }
+    document.getElementById('result').innerHTML = Math.round(res * 10) / 10
+}
 
 
 function changeVal(id) {
@@ -303,6 +338,7 @@ function changeVal(id) {
     $("#rangeout_" + (id + 1)).text(Math.round(nextVal - rangeVal))
     that.find('output').text(Math.round(rangeVal - beforeVal))
     that.css({left: rangeVal + "%"})
+    formula()
 }
 
 new Typed('.chat__text', {
@@ -318,4 +354,13 @@ new Typed('.chat__item--user', {
     startDelay: 2500,
     showCursor: false
 })
+
+
+
+
+
+
+
+
+
 
