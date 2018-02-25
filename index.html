@@ -114,19 +114,19 @@
 </section>
 <section class="b_calculate">
     <div class="content">
-        <ul class="tabs__control first animate">
-            <li class="tabs__control--item first">Business</li>
-            <li class="tabs__control--item second">Individual</li>
+        <ul class="tabs__control second">
+            <li class="tabs__control--item second">Business</li>
+            <li class="tabs__control--item first">Individual</li>
         </ul>
         <p class="calculate__text animate">
             Introducing QUBO to your landscape will generate quick wins and tangible benefits from time savings and
             overall increase in productivity
         </p>
-        <div class="calculate__wrap calculate__wrap--first animate">
+        <div class="calculate__wrap calculate__wrap--first" style="display: none">
             <div class="calculate__cols">
                 <div class="calculate__col">
                     <select id="industry">
-                        <option disabled selected>Choose your industry</option>
+                        <option value="" disabled selected>Choose your industry</option>
                         <option value="accommodations">Accommodations and food services</option>
                         <option value="manufacturing">Manufacturing</option>
                         <option value="agriculture">Agriculture</option>
@@ -143,7 +143,7 @@
                 </div>
                 <div class="calculate__col">
                     <select id="country">
-                        <option disabled selected>Choose your country</option>
+                        <option value="" disabled selected>Choose your country</option>
                         <option value="1">USA</option>
                         <option value="1">Canada</option>
                         <option value="1">Japan</option>
@@ -196,28 +196,54 @@
             <p class="calculate__result-title">Results</p>
             <p class="calculate__result">Saving <span id="result">X</span> hours per a week</p>
         </div>
-        <div class="calculate__wrap calculate__wrap--second" style="display: none">
+        <div class="calculate__wrap calculate__wrap--second" >
             <div class="calculate__cols">
                 <div class="calculate__col">
                     <form class="form__salary">
-                        <input class="range-secondary" type="range" name="salary" min="0" max="20" value="5"
+                        <input class="range-secondary" type="range" id="salary" min="3000" max="100000" value="30000"
                                oninput="this.form.salaryOutput.value=this.value"/>
-                        <output name="salaryOutput" min="0" max="20" value="0"
+                        <output name="salaryOutput"
                                 oninput="this.form.salary.value=this.value"></output>
                         <p>Average annual salary</p>
                     </form>
                     <form class="form__employees">
-                        <input class="range-secondary" type="range" name="salary" min="0" max="20" value="10"
+                        <input class="range-secondary" type="range" id="employees" min="100" max="100000" value="500"
                                oninput="this.form.salaryOutput.value=this.value"/>
-                        <output name="salaryOutput" min="0" max="20" value="0"
+                        <output name="salaryOutput"
                                 oninput="this.form.salary.value=this.value"></output>
                         <p>Employees number</p>
                     </form>
                 </div>
                 <div class="calculate__col">
-                    <select name="">
-                        <options>Choose your country</options>
-                        <options></options>
+                    <select id="industry-business">
+                        <option value="" disabled selected>Choose your industry</option>
+                        <option value="accommodations">Accommodations and food services</option>
+                        <option value="manufacturing">Manufacturing</option>
+                        <option value="agriculture">Agriculture</option>
+                        <option value="transportation">Transportation and warehousing</option>
+                        <option value="mining">Mining</option>
+                        <option value="construction">Construction</option>
+                        <option value="utilities">Utilities</option>
+                        <option value="wholesale ">Wholesale trade</option>
+                        <option value="retail">Retail trade</option>
+                        <option value="health">Health care and social assistance</option>
+                        <option value="finance">Finance and Insurance</option>
+                        <option value="real">Real estate</option>
+                    </select>
+                    <select id="country-business">
+                        <option value="" disabled selected>Choose your country</option>
+                        <option value="1">USA</option>
+                        <option value="1">Canada</option>
+                        <option value="1">Japan</option>
+                        <option value="1">EU</option>
+                        <option value="1">Australia</option>
+                        <option value="0">Ukraine</option>
+                        <option value="0">Mexico</option>
+                        <option value="0">Russia</option>
+                        <option value="0">Brazil</option>
+                        <option value="0">China</option>
+                        <option value="0">India</option>
+                        <option value="0">Kazakhstan</option>
                     </select>
                 </div>
             </div>
@@ -228,7 +254,7 @@
                 <div class="saving-bar">
                     <span style="width: 20%"></span>
                 </div>
-                <p><span class="saving__text">Pessimistic</span><span class="saving__result">$ 100 000</span></p>
+                <p><span class="saving__text">Pessimistic</span><span class="saving__result pess">$ 100 000</span></p>
             </div>
 
         </div>
@@ -533,7 +559,7 @@
     </div>
 </footer>
 <div class="modal__video">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/lCKqp2IJoTY?rel=0&amp;showinfo=0"
+    <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/lCKqp2IJoTY?rel=0&amp;showinfo=0"
             frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 </body>

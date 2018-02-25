@@ -85,7 +85,6 @@ header
   position: relative
   z-index 5
 
-
 .main__title
   color: #FFFFFF
   font-size: 80px
@@ -94,6 +93,7 @@ header
   padding-bottom: 22px
   opacity 0
   animation: opacity .4s .5s forwards
+
 .main__text
   color: #FFFFFF
   font-size: 18px
@@ -103,6 +103,7 @@ header
   margin 0 auto
   opacity 0
   animation: opacity .4s .7s forwards
+
 .chat__wrap
   width: 595px;
   margin: 0 auto;
@@ -238,7 +239,6 @@ header
     padding: 10px 14px;
     animation: videoAnimatePic .6s 4.5s forwards
 
-
 @keyframes videoAnimate {
   0% {
     width: 81px
@@ -260,7 +260,6 @@ header
   }
 }
 
-
 @keyframes videoAnimatePic {
   0% {
     transform rotate(0)
@@ -271,9 +270,6 @@ header
   }
 }
 
-
-
-
 .main__video-link--text
   color: #046FD7
   line-height: 26.5px
@@ -282,7 +278,6 @@ header
   font-size 0
   opacity 0
   animation: videoAnimateText .6s 5.1s forwards
-
 
 .b_value
   padding-top: 42px
@@ -297,7 +292,7 @@ header
   &:first-child
     width: 317px
     padding-top: 25px
-    animation: moveYoga 5s linear .5s  infinite
+    animation: moveYoga 5s linear .5s infinite
 
   &:last-child
     width: 600px
@@ -349,7 +344,7 @@ header
     content: ''
     display: block
     position: absolute
-    right 50%
+    right 0%
     top: 0
     background-color #046FD7
     transition: right .3s
@@ -359,7 +354,7 @@ header
       transition color .3
   &.second
     &:before
-      right: 0
+      right: 50%
       transition: right .3s
     .second
       color: #ffffff
@@ -507,12 +502,10 @@ canvas
   position: absolute
   top: 0
 
-
 .showBlock
   transform translateY(60px);
   opacity: 0;
   animation: showBlock .3s forwards
-
 
 @keyframes showBlock {
   0% {
@@ -525,21 +518,23 @@ canvas
   }
 }
 
-//body.open-modal
-//  overflow hidden
-//.modal__video
-//  display: none
-//  width: 100vw
-//  height: 100vh
-//  position: fixed
-//  top: 0
-//  left: 0
-//  background-color rgba(15, 46, 107, 0.56)
-//  z-index 9999999
-//  display: flex
-//  justify-content center
-//  align-items center
-//  overflow-y scroll
+.modal__video
+  display: none
+
+body.open-modal
+  overflow hidden
+  .modal__video
+    width: 100vw
+    height: 100vh
+    position: fixed
+    top: 0
+    left: 0
+    background-color rgba(15, 46, 107, 0.56)
+    z-index 9999999
+    display: flex
+    justify-content center
+    align-items center
+    overflow-y scroll
 
 
 

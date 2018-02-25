@@ -355,7 +355,7 @@ div[class^="outWrap_"] span {
 }
 .calculate__col {
   width: 50%;
-  padding-right: 10%;
+  padding-right: 7%;
 }
 .calculate__title {
   font-size: 18px;
@@ -429,9 +429,12 @@ div[class^="outWrap_"] span {
   font-size: 16.8px;
   color: #359be0;
   display: block;
-  width: 30px;
-  margin-left: -6px;
+  width: 60px;
+  margin-left: -30px;
   text-align: center;
+}
+.range-secondary {
+  width: 103%;
 }
 .saving__title {
   font-size: 24px;
@@ -480,10 +483,12 @@ div[class^="outWrap_"] span {
   background-color: #c4dbee;
   border-radius: 15px;
 }
+#industry-business + .nice-select {
+  margin-bottom: 30px;
+}
 input[type=range] {
   -webkit-appearance: none;
   margin: 15px 0;
-  width: 100%;
 }
 input[type=range]:focus {
   outline: none;
@@ -578,7 +583,7 @@ input[type=range]:focus::-ms-fill-upper {
   content: '';
   display: block;
   position: absolute;
-  right: 50%;
+  right: 0%;
   top: 0;
   background-color: #046fd7;
   transition: right 0.3s;
@@ -588,7 +593,7 @@ input[type=range]:focus::-ms-fill-upper {
   transition: color 0.3;
 }
 .tabs__control.second:before {
-  right: 0;
+  right: 50%;
   transition: right 0.3s;
 }
 .tabs__control.second .second {
@@ -892,6 +897,25 @@ canvas {
   transform: translateY(60px);
   opacity: 0;
   animation: showBlock 0.3s forwards;
+}
+.modal__video {
+  display: none;
+}
+body.open-modal {
+  overflow: hidden;
+}
+body.open-modal .modal__video {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(15,46,107,0.56);
+  z-index: 9999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
 }
 @-moz-keyframes opacity {
   0% {

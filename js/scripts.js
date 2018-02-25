@@ -1,7 +1,6 @@
+var body = $('body');
+
 $(document).ready(function () {
-
-
-    var body = $('body');
 
 //
 // //animation
@@ -151,58 +150,93 @@ $(document).ready(function () {
         }
     })
 
-    var container = $("#range-container");
 
-    var values = [1, 6, 21, 36, 51, 67]
-    var previus = [0, 0, 0, 0, 0, 0];
-    var itemWidth = 10;
+    $(window).on('scroll', function () {
+        if (window.scrollY > 100) {
+            $('header').addClass('bg');
+        } else {
+            $('header').removeClass('bg');
+        }
+    });
+
+    $('.animate').addClass("hidden").viewportChecker({
+        classToAdd: 'showBlock',
+        offset: 230
+    });
+
+
+})
+
+new Typed('.chat__text', {
+    strings: ["Hello, how can I help you?", "Hello, how can I help you?"],
+    typeSpeed: 30,
+    startDelay: 500,
+    showCursor: false
+});
+new Typed('.chat__item--user', {
+    strings: ["I can not choose a supplier account.", "I can not choose a supplier account."],
+    typeSpeed: 30,
+    backDelay: 500,
+    startDelay: 2500,
+    showCursor: false
+})
+
+
+// individual
+var container = $("#range-container");
+
+var values = [1, 6, 21, 36, 51, 67]
+var previus = [0, 0, 0, 0, 0, 0];
+var itemWidth = 10;
 
 //append inputs
-    values.forEach(function (value, i) {
-        var id = "range" + i;
-        var oninput = "rangeout_" + i + '.value = ' + id + '.value';
-        var input = $('<input type="range" multiple></input>').clone();
+values.forEach(function (value, i) {
+    var id = "range" + i;
+    var oninput = "rangeout_" + i + '.value = ' + id + '.value';
+    var input = $('<input type="range" multiple></input>').clone();
 
-        input.attr("max", 100)
-        input.attr("id", id);
-        input.attr("min", 0);
-        input.attr("step", 0.01);
-        input.attr("oninput", oninput);
-        input.val(value)
-        container.append(input);
+    input.attr("max", 100)
+    input.attr("id", id);
+    input.attr("min", 0);
+    input.attr("step", 0.01);
+    input.attr("oninput", oninput);
+    input.val(value)
+    container.append(input);
 
-        $(window).resize(function () {
-            //$("#range" + i).change();
-            input.change();
-        })
-
+    $(window).resize(function () {
+        //$("#range" + i).change();
+        input.change();
     })
 
-    /* $("input").change(function(){
-       console.log($(this).val())
-     })*/
-    function getDirection(index, value) {
-        if (previus[index] > value) {
-            previus[index] = value;
-            return 'left';
-        }
+})
 
+/* $("input").change(function(){
+   console.log($(this).val())
+ })*/
+function getDirection(index, value) {
+    if (previus[index] > value) {
         previus[index] = value;
-
-        return 'right';
+        return 'left';
     }
 
-    function checkIfHasMove(position, index, width) {
-        var length = (values.length - 1) - index;
+    previus[index] = value;
+
+    return 'right';
+}
+
+function checkIfHasMove(position, index, width) {
+    var length = (values.length - 1) - index;
 
 
-        if (position > width - itemWidth * length) {
-            console.log('dont has move')
-            return false;
-        }
-
-        return true;
+    if (position > width - itemWidth * length) {
+        console.log('dont has move')
+        return false;
     }
+
+    return true;
+}
+
+$(document).ready(function () {
 
 
     $('input').each(function () {
@@ -257,6 +291,7 @@ $(document).ready(function () {
             }
         });
     })
+
     $('#range-container').find('input').each(function (index) {
         changeVal(index)
     })
@@ -271,42 +306,7 @@ $(document).ready(function () {
         var percent = this.value * 100 / (this.max - this.min)
         $(this).next('output').css({left: percent + '%'})
     })
-    $(window).on('scroll', function () {
-        console.log(window.scrollY);
-        if (window.scrollY > 100) {
-            $('header').addClass('bg');
-        } else {
-            $('header').removeClass('bg');
-        }
-    });
-
-    $('.animate').addClass("hidden").viewportChecker({
-        classToAdd: 'showBlock',
-        offset: 230
-    });
-
-    body.on('click', '.main__video-link', function () {
-        $('.modal__video').show();
-        return false
-    })
-    body.on('change', 'select', function () {
-        formula()
-    })
 })
-var industry = {
-    accommodations: {management: 30, expertise: 40, interface: 50, collect: 80, process: 90},
-    manufacturing: {management: 10, expertise: 20, interface: 20, collect: 80, process: 70},
-    agriculture: {management: 10, expertise: 40, interface: 40, collect: 90, process: 80},
-    transportation: {management: 30, expertise: 40, interface: 40, collect: 80, process: 90},
-    mining: {management: 10, expertise: 50, interface: 10, collect: 80, process: 80},
-    construction: {management: 20, expertise: 30, interface: 30, collect: 80, process: 70},
-    utilities: {management: 10, expertise: 20, interface: 30, collect: 80, process: 80},
-    wholesale: {management: 10, expertise: 20, interface: 20, collect: 80, process: 70},
-    retail: {management: 10, expertise: 30, interface: 20, collect: 80, process: 70},
-    health: {management: 10, expertise: 20, interface: 20, collect: 60, process: 80},
-    finance: {management: 10, expertise: 30, interface: 30, collect: 70, process: 80},
-    real: {management: 10, expertise: 20, interface: 20, collect: 60, process: 80}
-}
 
 var formula = function () {
     var item = document.getElementById('industry').value
@@ -326,7 +326,6 @@ var formula = function () {
     document.getElementById('result').innerHTML = Math.round(res * 10) / 10
 }
 
-
 function changeVal(id) {
     id = +id
     var that = $(".outWrap_" + id)
@@ -341,26 +340,162 @@ function changeVal(id) {
     formula()
 }
 
-new Typed('.chat__text', {
-    strings: ["Hello, how can I help you?", "Hello, how can I help you?"],
-    typeSpeed: 30,
-    startDelay: 500,
-    showCursor: false
-});
-new Typed('.chat__item--user', {
-    strings: ["I can not choose a supplier account.", "I can not choose a supplier account."],
-    typeSpeed: 30,
-    backDelay: 500,
-    startDelay: 2500,
-    showCursor: false
+
+body.on('change', 'select', function () {
+    formula()
 })
 
+var industry = {
+    accommodations: {
+        countryFirst: 8.25,
+        countrySecond: 5.78,
+        management: 30,
+        expertise: 40,
+        interface: 50,
+        collect: 80,
+        process: 90
+    },
+    manufacturing: {
+        countryFirst: 7.2,
+        countrySecond: 5.04,
+        management: 10,
+        expertise: 20,
+        interface: 20,
+        collect: 80,
+        process: 70
+    },
+    agriculture: {
+        countryFirst: 7.25,
+        countrySecond: 5.08,
+        management: 10,
+        expertise: 40,
+        interface: 40,
+        collect: 90,
+        process: 80
+    },
+    transportation: {
+        countryFirst: 11.2,
+        countrySecond: 7.84,
+        management: 30,
+        expertise: 40,
+        interface: 40,
+        collect: 80,
+        process: 90
+    },
+    mining: {
+        countryFirst: 8.15,
+        countrySecond: 5.71,
+        management: 10,
+        expertise: 50,
+        interface: 10,
+        collect: 80,
+        process: 80
+    },
+    construction: {
+        countryFirst: 6.33,
+        countrySecond: 4.43,
+        management: 20,
+        expertise: 30,
+        interface: 30,
+        collect: 80,
+        process: 70
+    },
+    utilities: {
+        countryFirst: 8.9,
+        countrySecond: 6.23,
+        management: 10,
+        expertise: 20,
+        interface: 30,
+        collect: 80,
+        process: 80
+    },
+    wholesale: {
+        countryFirst: 8.2,
+        countrySecond: 5.74,
+        management: 10,
+        expertise: 20,
+        interface: 20,
+        collect: 80,
+        process: 70
+    },
+    retail: {
+        countryFirst: 10,
+        countrySecond: 10,
+        management: 10,
+        expertise: 30,
+        interface: 20,
+        collect: 80,
+        process: 70
+    },
+    health: {
+        countryFirst: 10,
+        countrySecond: 10,
+        management: 10,
+        expertise: 20,
+        interface: 20,
+        collect: 60,
+        process: 80
+    },
+    finance: {
+        countryFirst: 12.15,
+        countrySecond: 8.51,
+        management: 10,
+        expertise: 30,
+        interface: 30,
+        collect: 70,
+        process: 80
+    },
+    real: {
+        countryFirst: 9.6,
+        countrySecond: 6.72,
+        management: 10,
+        expertise: 20,
+        interface: 20,
+        collect: 60,
+        process: 80
+    }
+}
 
 
+// business
 
+var businessCalc = function () {
+    var industryVal = document.getElementById('industry-business').value
+    var salary = document.getElementById('salary').value
+    var country = document.getElementById('country-business').value
+    var employees = document.getElementById('employees').value
+    if (!industryVal || !country) return false
+    var resPess;
+    if (country == 0) {
+        resPess = salary * employees * industry[industryVal].countryFirst / 200;
+    } else {
+        resPess = salary * employees * industry[industryVal].countrySecond / 200;
+    }
+    resPess = Math.round(resPess)
+    var resOpt = resPess * 4;
 
+    $('.saving__result.opt').text('$ ' + resOpt)
+    $('.saving__result.pess').text('$ ' + resPess)
+    $('.saving-bar').find('span').css({width: (100 * resOpt / 1701962020) + '%'})
+}
 
+$(document).ready(function () {
+    body.on('change', '#industry-business, #country-business, .range-secondary', function () {
+        businessCalc()
+    })
+})
 
+// modal
+body.on('click', '.main__video-link', function () {
+    $('body').addClass('open-modal');
+    return false
+})
 
+$("body").click(function(e) {
+    if ($(e.target).hasClass('video')) {
+        return false;
+    }
+    $('body').removeClass('open-modal');
+})
 
 
