@@ -5,134 +5,156 @@
   background-position 70% top
   background-repeat no-repeat
   box-shadow: 0 15px 45px 0 rgba(23, 128, 224, 0.73);
-  height: 987px
-  padding-top: 74px
+  height: 61.6875rem
+  padding-top: 4.625rem
   box-sizing border-box
+  svg, img{
+    width: 100%
+  }
   .content
     position: relative
 .architecture
   &__title
-    font-size: 36px;
+    font-size: 2.25rem;
     color: #FFFFFF;
     text-align center
-    padding-bottom: 60px
+    padding-bottom: 3.75rem
   &__sub-title
-    max-width 455px
-    font-size: 20px;
+    max-width 28.4375rem
+    font-size: 1.25rem;
     color: #FFFFFF;
-    line-height: 30px;
-    margin-left: 156px
+    line-height: 1.875rem;
+    margin-left: 9.75rem
   &__users--text
     font-weight: lighter
-    font-size: 36px;
+    font-size: 2.25rem;
     color: #FFFFFF;
-    margin: 13px 153px;
-    width: 150px;
+    margin: 0.8125rem 9.5625rem;
+    width: 9.375rem;
 
 .architecture__users
-  margin: 125px 0 0 144px
+  margin: 7.8125rem 0 0 9rem
   display inline-block
+  width: 12.75rem
+  height 9.5625rem
 
 .architecture__arrows
-  width: 110px
+  width: 6.875rem
   position: absolute;
-  top: 446px;
-  left: 381px;
+  top: 27.875rem;
+  left: 23.8125rem;
   img:last-child
-    padding-bottom: 19px
+    padding-bottom: 1.1875rem
     transform rotate(180deg)
 .architecture__graph
-  width: 495px;
-  height: 557px;
+  width: 33.7rem;
+  height: 34.8125rem;
   background-image: url(../images/arch-graph.svg);
   display: block;
   content: '';
   position: absolute;
-  top: 159px;
-  left: 505px;
+  top: 9.9375rem;
+  background-size 100%
+  left: 31.5625rem;
 .architecture__session
   position: absolute
-  top: 415px;
-  left: 523px;
+  top: 25.9375rem;
+  left: 32.6875rem;
+  width: 8.625rem
+  height: 9.25rem
 
 .architecture__session--text
   font-weight: lighter
-  font-size: 36px;
+  font-size: 2.25rem;
   color: #FFFFFF;
   position: absolute
-  top: 560px;
-  left: 531px
+  top: 35rem;
+  left: 33.1875rem
 .architecture__detection--text
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #FFFFFF;
   letter-spacing: 0;
   font-weight: lighter
   position: absolute
-  top: 246px;
-  left: 641px;
+  top: 15.375rem;
+  left: 40.0625rem;
 .architecture__clarification--text
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #FFFFFF;
   letter-spacing: 0;
   font-weight: lighter
   position: absolute
-  top: 354px;
-  left: 645px;
+  top: 22.125rem;
+  left: 40.3125rem;
 
 .architecture__execution--text
   font-weight: lighter
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #FFFFFF;
   position: absolute
-  top: 443px;
-  left: 949px;
+  top: 27.6875rem;
+  left: 59.3125rem;
 .architecture__solution--text
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #0071DB;
-  letter-spacing: 0;
   font-weight: lighter
   position: absolute
-  top: 667px;
-  left: 673px;
+  top: 41.6875rem;
+  left: 42.0625rem;
 .architecture__network--text
-  font-size: 36px;
+  font-size: 2.25rem;
   color: #FFFFFF;
-  letter-spacing: 0;
   font-weight: lighter
 
 .architecture__core--text
-  font-size: 36px;
+  font-size: 2.25rem;
   color: #FFFFFF;
-  letter-spacing: 0;
   font-weight: lighter
   position: absolute
-  top: 140px;
-  left: 852px;
+  top: 8.75rem;
+  left: 53.25rem;
 .architecture__core--sub-text
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #FFFFFF;
-  line-height: 30px;
+  line-height: 1.875rem;
   position: absolute
-  top: 153px;
-  left: 950px;
+  top: 9.5625rem;
+  left: 59.375rem
   font-weight: 400
 .architecture__brain
   position: absolute
-  top: 242px;
-  left: 822px;
+  top: 15.125rem;
+  left: 51.375rem;
+  width: 8.9375rem
+  height: 8.9375rem
 .architecture__laptop
   position: absolute
-  top: 575px;
-  left: 846px;
+  top: 35.9375rem;
+  left: 52.875rem;
+  width: 7.8125rem
+  height: 7.8125rem
 .architecture__network--text
   position: absolute;
-  top: 728px;
-  left: 777px;
+  top: 45.5rem;
+  left: 48.5625rem;
 .architecture__network--sub-text
   position: absolute;
-  top: 778px;
-  left: 779px;
-  max-width: 321px;
-  font-size: 20px;
+  top: 48.625rem;
+  left: 48.6875rem;
+  max-width: 20.0625rem;
+  font-size: 1.25rem;
   color: #FFFFFF;
-  line-height: 30px;
+  line-height: 1.875rem;
+.architecture__mob-pic
+  display: none
+
+@media (max-width 1200px)
+  .architecture__core--sub-text
+    top: 11.0625rem;
+    left: 51.375rem;
+
+  .architecture__network--text
+    left: 43.0625rem;
+  .architecture__network--sub-text
+    left: 43.0625rem;
+

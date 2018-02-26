@@ -165,21 +165,6 @@ $(document).ready(function () {
     });
 
 
-    new Typed('.chat__text', {
-        strings: ["Hello, how can I help you?", "Hello, how can I help you?"],
-        typeSpeed: 30,
-        startDelay: 500,
-        showCursor: false
-    });
-    new Typed('.chat__item--user', {
-        strings: ["I can not choose a supplier account.", "I can not choose a supplier account."],
-        typeSpeed: 30,
-        backDelay: 500,
-        startDelay: 2500,
-        showCursor: false
-    })
-
-
 // individual
     var container = $("#range-container");
 
@@ -224,7 +209,6 @@ $(document).ready(function () {
 
     function checkIfHasMove(position, index, width) {
         var length = (values.length - 1) - index;
-
 
         if (position > width - itemWidth * length) {
             console.log('dont has move')
@@ -304,7 +288,7 @@ $(document).ready(function () {
     })
 
 
-    var formula = function () {
+    function formula() {
         var item = document.getElementById('industry').value
         var countryEl = document.getElementById('country')
 
@@ -340,117 +324,6 @@ $(document).ready(function () {
     body.on('change', 'select', function () {
         formula()
     })
-
-    var industry = {
-        accommodations: {
-            countryFirst: 8.25,
-            countrySecond: 5.78,
-            management: 30,
-            expertise: 40,
-            interface: 50,
-            collect: 80,
-            process: 90
-        },
-        manufacturing: {
-            countryFirst: 7.2,
-            countrySecond: 5.04,
-            management: 10,
-            expertise: 20,
-            interface: 20,
-            collect: 80,
-            process: 70
-        },
-        agriculture: {
-            countryFirst: 7.25,
-            countrySecond: 5.08,
-            management: 10,
-            expertise: 40,
-            interface: 40,
-            collect: 90,
-            process: 80
-        },
-        transportation: {
-            countryFirst: 11.2,
-            countrySecond: 7.84,
-            management: 30,
-            expertise: 40,
-            interface: 40,
-            collect: 80,
-            process: 90
-        },
-        mining: {
-            countryFirst: 8.15,
-            countrySecond: 5.71,
-            management: 10,
-            expertise: 50,
-            interface: 10,
-            collect: 80,
-            process: 80
-        },
-        construction: {
-            countryFirst: 6.33,
-            countrySecond: 4.43,
-            management: 20,
-            expertise: 30,
-            interface: 30,
-            collect: 80,
-            process: 70
-        },
-        utilities: {
-            countryFirst: 8.9,
-            countrySecond: 6.23,
-            management: 10,
-            expertise: 20,
-            interface: 30,
-            collect: 80,
-            process: 80
-        },
-        wholesale: {
-            countryFirst: 8.2,
-            countrySecond: 5.74,
-            management: 10,
-            expertise: 20,
-            interface: 20,
-            collect: 80,
-            process: 70
-        },
-        retail: {
-            countryFirst: 10,
-            countrySecond: 10,
-            management: 10,
-            expertise: 30,
-            interface: 20,
-            collect: 80,
-            process: 70
-        },
-        health: {
-            countryFirst: 10,
-            countrySecond: 10,
-            management: 10,
-            expertise: 20,
-            interface: 20,
-            collect: 60,
-            process: 80
-        },
-        finance: {
-            countryFirst: 12.15,
-            countrySecond: 8.51,
-            management: 10,
-            expertise: 30,
-            interface: 30,
-            collect: 70,
-            process: 80
-        },
-        real: {
-            countryFirst: 9.6,
-            countrySecond: 6.72,
-            management: 10,
-            expertise: 20,
-            interface: 20,
-            collect: 60,
-            process: 80
-        }
-    }
 
 
 // business
@@ -494,5 +367,135 @@ $(document).ready(function () {
         $('body').removeClass('open-modal');
     })
 
+    new Typed('.chat__item--qubo span', {
+        strings: ["Hello. Describe your problem/issue, please"],
+        typeSpeed: 30,
+        startDelay: 500,
+        showCursor: false
+    });
+    new Typed('.chat__item--user span', {
+        strings: ["How to run SAP report in background?"],
+        typeSpeed: 30,
+        backDelay: 500,
+        startDelay: 2500,
+        showCursor: false
+    })
+
+
+//if is mobile
+
+    // for (var i = 0; i < 6; i++) {
+    //     $('#range' + i).after($('.outWrap_' + i))
+    // }
 
 })
+var industry = {
+    accommodations: {
+        countryFirst: 8.25,
+        countrySecond: 5.78,
+        management: 30,
+        expertise: 40,
+        interface: 50,
+        collect: 80,
+        process: 90
+    },
+    manufacturing: {
+        countryFirst: 7.2,
+        countrySecond: 5.04,
+        management: 10,
+        expertise: 20,
+        interface: 20,
+        collect: 80,
+        process: 70
+    },
+    agriculture: {
+        countryFirst: 7.25,
+        countrySecond: 5.08,
+        management: 10,
+        expertise: 40,
+        interface: 40,
+        collect: 90,
+        process: 80
+    },
+    transportation: {
+        countryFirst: 11.2,
+        countrySecond: 7.84,
+        management: 30,
+        expertise: 40,
+        interface: 40,
+        collect: 80,
+        process: 90
+    },
+    mining: {
+        countryFirst: 8.15,
+        countrySecond: 5.71,
+        management: 10,
+        expertise: 50,
+        interface: 10,
+        collect: 80,
+        process: 80
+    },
+    construction: {
+        countryFirst: 6.33,
+        countrySecond: 4.43,
+        management: 20,
+        expertise: 30,
+        interface: 30,
+        collect: 80,
+        process: 70
+    },
+    utilities: {
+        countryFirst: 8.9,
+        countrySecond: 6.23,
+        management: 10,
+        expertise: 20,
+        interface: 30,
+        collect: 80,
+        process: 80
+    },
+    wholesale: {
+        countryFirst: 8.2,
+        countrySecond: 5.74,
+        management: 10,
+        expertise: 20,
+        interface: 20,
+        collect: 80,
+        process: 70
+    },
+    retail: {
+        countryFirst: 10,
+        countrySecond: 10,
+        management: 10,
+        expertise: 30,
+        interface: 20,
+        collect: 80,
+        process: 70
+    },
+    health: {
+        countryFirst: 10,
+        countrySecond: 10,
+        management: 10,
+        expertise: 20,
+        interface: 20,
+        collect: 60,
+        process: 80
+    },
+    finance: {
+        countryFirst: 12.15,
+        countrySecond: 8.51,
+        management: 10,
+        expertise: 30,
+        interface: 30,
+        collect: 70,
+        process: 80
+    },
+    real: {
+        countryFirst: 9.6,
+        countrySecond: 6.72,
+        management: 10,
+        expertise: 20,
+        interface: 20,
+        collect: 60,
+        process: 80
+    }
+}

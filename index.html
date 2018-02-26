@@ -13,6 +13,9 @@
 <header>
     <div class="content">
         <img src="images/logo.svg" alt="" class="header-logo">
+        <div class="header_mob-group">
+            <div class="mob__open-menu"></div>
+        </div>
         <ul class="menu__list">
             <li class="menu__item">
                 <a href="" class="menu__link">
@@ -52,6 +55,11 @@
         </ul>
     </div>
 </header>
+<section class="b_breadcrumbs">
+<div class="content">
+    <a href="/">home</a> <span class="breadcrumbs__current">Solution</span>
+</div>
+</section>
 <section class="b_main" id="particles-js">
     <div class="content">
         <img src="images/logo.svg" class="mail__logo">
@@ -61,11 +69,29 @@
             automated resolution of user requests
         </p>
         <div class="chat__wrap clearfix">
-            <div class="chat__item--qubo">
-                <img class="chat__pic" src="images/logo_small.svg" alt="">
-                <div class="chat__text"></div>
+            <div class="chat__content">
+                <div class="chat__item chat__item--qubo">
+                    <img class="chat__pic" src="images/logo_small.svg" alt="">
+                    <span class="chat__text"></span>
+                </div>
+                <div class="chat__item chat__item--user">
+                    <span class="chat__text"></span>
+                </div>
+                <div class="chat__item chat__item--qubo">
+                    <img class="chat__pic" src="images/logo_small.svg" alt="">
+                    <span class="chat__text">Do you want to read the instructions "Setting the background job in SAP ERP"?</span>
+                </div>
+                <div class="chat__item chat__item--user"><span>Yes</span></div>
+                <div class="chat__item chat__item--qubo">
+                    <img class="chat__pic" src="images/logo_small.svg" alt="">
+                    <span class="chat__text">Follow the link for instructions</span>
+                </div>
+                <div class="chat__item chat__item--qubo">
+                    <img class="chat__pic" src="images/logo_small.svg" alt="">
+                    <span class="chat__text">Has your issue been solved?</span>
+                </div>
+                <div class="chat__item chat__item--user"><span>Yes</span></div>
             </div>
-            <div class="chat__item--user"></div>
         </div>
         <div class="main__video-block">
             <a href="" class="main__video-link">
@@ -194,9 +220,9 @@
                 <div id="range-container"></div>
             </div>
             <p class="calculate__result-title">Results</p>
-            <p class="calculate__result">Saving <span id="result">X</span> hours per a week</p>
+            <p class="calculate__result">Saving <span id="result">X</span> <span class="calculate__result-mob"> hours per a week</span></p>
         </div>
-        <div class="calculate__wrap calculate__wrap--second" >
+        <div class="calculate__wrap calculate__wrap--second">
             <div class="calculate__cols">
                 <div class="calculate__col">
                     <form class="form__salary">
@@ -265,41 +291,44 @@
         <h2 class="architecture__title">
             QUBO architecture
         </h2>
-
-
         <p class="architecture__sub-title">
             QUBO is designed for easy deployment and seamless integration in any environment. Micro-services
             architecture provides business agility and optimal Total Cost of ownership
         </p>
 
-        <div class="architecture__users"><img src="images/men.svg" width="204" height="153"></div>
-        <p class="architecture__users--text">User requests</p>
+        <div class="architecture__wrap">
+            <div class="architecture__users"><img src="images/men.svg"></div>
+            <p class="architecture__users--text">User requests</p>
 
-        <div class="architecture__arrows">
-            <img src="images/arch-arrow.svg">
-            <img src="images/arch-arrow.svg">
+            <div class="architecture__arrows">
+                <img src="images/arch-arrow.svg">
+                <img src="images/arch-arrow.svg">
+            </div>
+
+            <div class="architecture__graph"></div>
+            <div class="architecture__session"><img src="images/session-icon.svg"></div>
+            <div class="architecture__session--text">Session</div>
+
+
+            <div class="architecture__detection--text">Detection</div>
+            <div class="architecture__clarification--text">Clarification</div>
+            <div class="architecture__core--text">Core</div>
+            <div class="architecture__core--sub-text">Detect user issue</div>
+
+            <div class="architecture__execution--text">Execution</div>
+
+            <div class="architecture__solution--text">Solution</div>
+            <div class="architecture__brain"><img src="images/brain.svg"></div>
+
+            <div class="architecture__laptop"><img src="images/laptop.svg"></div>
+
+            <p class="architecture__network--text">Network of agents</p>
+            <p class="architecture__network--sub-text">Execute functions and procedures in business applications</p>
         </div>
 
-        <div class="architecture__graph"></div>
-        <div class="architecture__session"><img src="images/session-icon.svg"></div>
-        <div class="architecture__session--text">Session</div>
-
-
-        <div class="architecture__detection--text">Detection</div>
-        <div class="architecture__clarification--text">Clarification</div>
-        <div class="architecture__core--text">Core</div>
-        <div class="architecture__core--sub-text">Detect user issue</div>
-
-        <div class="architecture__execution--text">Execution</div>
-
-        <div class="architecture__solution--text">Solution</div>
-        <div class="architecture__brain"><img src="images/brain.svg"></div>
-
-        <div class="architecture__laptop"><img src="images/laptop.svg"></div>
-
-        <p class="architecture__network--text">Network of agents</p>
-        <p class="architecture__network--sub-text">Execute functions and procedures in business applications</p>
-
+    </div>
+    <div class="architecture__mob-pic">
+        <img src="images/mob-graph.svg">
     </div>
 </section>
 <section class="b_team">
@@ -484,7 +513,7 @@
         <div class="footer__cols">
             <div class="footer__col--big">
                 <img src="images/logo-footer.svg" alt="" class="footer__logo">
-                <ul class="footer__menu">
+                <ul class="footer__menu menu-site">
                     <li class="footer__menu-item">
                         <a href="" class="footer__menu-link">
                             Home

@@ -11,8 +11,6 @@ body
   width: 1180px
   margin: 0 auto
   font-family 'Lato', sans-serif
-  @media (max-width 1200px)
-    width: 980px
 
 .section__title
   padding-bottom: 55px
@@ -112,67 +110,79 @@ header
   z-index: 3;
   text-align: left;
   padding-right: 70px;
-  height: 144px
+  height: 159px
+  content ''
+.chat__content
+  width: 98%
 
+.chat__item
+  width: 100%
+.chat__item:after
+  display: block
+  content: ''
+  height: 1px
+  flex 1 auto
 .chat__item--qubo
   display: flex
-
-.chat__text
-  background: #FFFFFF
-  border-radius: 28.51px
-  font-size: 19.01px
-  color: #151C1B
-  letter-spacing: -0.41px
-  position: relative
-  display: flex
-  align-items center
-  padding: 0 20px
-  margin-left: 20px
-  margin-top: 8px
-  box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.19);
-  &:before
-    position: absolute
-    left: -12px;
-    bottom: -19px;
-    width: 31px;
-    height: 41px;
-    background-image url("../images/quote.png")
-    background-size contain
-    background-position top left
-    background-repeat no-repeat
-    display: block
-    content: ''
+  span
+    background: #FFFFFF
+    border-radius: 28.51px
+    font-size: 19.01px
+    color: #151C1B
+    letter-spacing: -0.41px
+    position: relative
+    display: flex
+    align-items center
+    padding: 19px 14px
+    margin-left: 20px
+    margin-top: 8px
+    box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.19);
+    max-width 80%
+    &:before
+      position: absolute
+      left: -12px;
+      bottom: -19px;
+      width: 31px;
+      height: 41px;
+      background-image url("../images/quote.png")
+      background-size contain
+      background-position top left
+      background-repeat no-repeat
+      display: block
+      content: ''
 
 .chat__pic
   animation: float .8s 2
 
 .chat__item--user
-  max-width: 190px
-  background: #81BDF7
-  border-radius: 30px 30px 20px 30px
-  font-size: 19.01px
-  color: #FFFFFF
-  letter-spacing: -0.41px
-  padding: 19px 14px
-  float right
-  position: relative
-  margin-top: 6px
-  box-shadow: 0 14px 14px 0 rgba(197, 226, 255, 1);
-  animation: opacity .1s 2.2s forwards
-  opacity 0
-  min-height: 61px
-  &:before
-    position: absolute
-    right: -17px;
-    bottom: -19px;
-    width: 36px;
-    height: 44px;
-    background-image url("../images/quote-blue.png")
-    background-size contain
-    background-position top left
-    background-repeat no-repeat
-    display: block
-    content: ''
+  display flex
+  flex-direction: row-reverse;
+  span
+    background: #81BDF7
+    border-radius: 30px 30px 20px 30px
+    font-size: 19.01px
+    color: #FFFFFF
+    letter-spacing: -0.41px
+    padding: 19px 14px
+    position: relative
+    margin-top: 6px
+    box-shadow: 0 14px 14px 0 rgba(197, 226, 255, 1);
+    animation: opacity .1s 2.2s forwards
+    opacity 0
+    min-height: 61px
+    max-width 80%
+    &:before
+      position: absolute
+      right: -17px;
+      bottom: -19px;
+      width: 36px;
+      height: 44px;
+      background-image url("../images/quote-blue.png")
+      background-size contain
+      background-position top left
+      background-repeat no-repeat
+      display: block
+      content: ''
 
 @keyframes opacity {
   0% {
@@ -410,6 +420,7 @@ header
 .team__pic
   margin-bottom: 27px
   border-radius 100%
+  width: 100%
 
 .team__name
   font-size: 18px
@@ -536,36 +547,235 @@ body.open-modal
     justify-content center
     align-items center
     overflow-y scroll
+.b_breadcrumbs
+  display: none
+
+@media (max-width 1200px)
+  .content
+    width: 980px
+
+@media (max-width 1200px)
+  .content
+    width: 760px
+  .menu__link
+    margin-left: 28px;
+  .main__video-block
+    width: 100%;
+    background-repeat no-repeat
+  .value__cols
+    padding: 0
+  .calculate__wrap
+    padding: 65px 30px
+  html
+    font-size 12px
+  .team__item
+    padding-bottom: 35px
+
+@media (max-width 767px)
+  .content
+    width: 300px
+    outline: 1px solid #0f2e6b
+  .header-logo
+    opacity 1
+
+  .mob__open-menu
+    width: 24px
+    height: 2px
+    background-color #ffffff
+    display: block
+    content: ''
+    position: relative
+    &:before
+      position: absolute
+      top: -10px;
+      width: 100%
+      height: 2px
+      background-color red
+      display: block
+      content: ''
+    &:after
+      position: absolute
+      top: -5px;
+      width: 70%
+      height: 2px
+      background-color black
+      display: block
+      content: ''
+
+  .menu__list
+    display: none
+
+  .main__title
+    font-weight: lighter
+    font-size: 34px;
+    color: #FFFFFF;
+    line-height: 35.5px;
+  .mail__logo
+    width: 178px
+  .main__text
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 20px;
+  .chat__wrap
+    width: 100%
+    padding: 0
+
+  .chat__item span
+    font-weight: lighter
+    font-size: 18.06px;
+    letter-spacing: -0.39px;
+  .chat__item--qubo span
+    margin-left: 15px
+  .main__video-block
+    background none
+  .chat__content
+    display: none
+  .main__video-link
+    max-width 256px
+    height: 51px
+  .main__video-link img
+    width: 57px
+  .main__video-link--text
+    padding-top: 11px
+    font-weight: 500
+    font-size: 18px;
+  .value__cols
+    flex-direction column
+  .value__col:first-child
+    margin: 0 auto
+    width: 135px
+    padding-top: 55px
+    img
+      width: 100%
+  .value__col:last-child
+    width: 100%
+    padding-top: 35px
+  .value__item
+    width: 33%
+  .value__title
+    position: absolute;
+    text-align: center;
+    top: -209px;
+    width: 100%;
+  .value__svg
+    width: 58px
 
 
+  .value__text
+    font-weight: lighter
+    font-size: 14px;
+    color: rgba(36,36,36,0.80);
+    letter-spacing: 0;
+    line-height: 17.92px;
+  .tabs__control
+    width: 100%
+  .calculate__wrap--second
+    .calculate__cols
+      flex-direction column-reverse
+    .calculate__col:last-child
+      padding-bottom: 40px
+  .calculate__cols
+    flex-direction column
+  .calculate__wrap--first
+    .calculate__col
+      padding-bottom: 40px
+    .calculate__cols
+      padding-bottom: 0
+  #range-container
+    display: block
+    input[type="range"][multiple]
+      display inline-block
+  div[class^="outWrap_"]
+    position: static
+    width: 100%
+    margin: 0
+    margin-bottom: 20px
+    text-align left
+  div[class^="outWrap_"] span
+    display: inline-block
+    padding-top: 0
+  .outWrap_0 span, .outWrap_2 span, .outWrap_4 span
+    float: left
+    padding-right: 5px
 
+  .calculate__range-wrap
+    margin: 0
+    padding-bottom: 0
+  .calculate__col
+    width: 100%
+    padding: 0
+  .calculate__result-mob
+    font-size 24px
+  .saving__block
+    width: 100%
+  .saving__title
+    font-size: 24px;
+    text-align left
+    padding-top: 0
+  .saving__result, .saving__result.opt
+    font-weight: lighter
+    font-size: 20px;
+  .saving-bar
+    height: 6px
+  .saving-bar span
+    height: 6px
+  .architecture__mob-pic
+    display: block
+    background: #046FD7;
+    box-shadow: 0 15px 45px 0 rgba(23,128,224,0.73);
+    max-width 400px
+    margin: 0 auto
+    padding-top: 20px
+    padding-bottom: 20px
+  .architecture__wrap
+    display: none
+  .b_architecture
+    height: auto
+    background none
+    box-shadow none
+  .architecture__title
+    font-size: 24px;
+    color: #046FD7;
+    text-align left
+    padding-bottom: 1rem
+  .architecture__sub-title
+    margin: 0
+    font-size: 16px;
+    color: rgba(36,36,36,0.80);
+    line-height: 26px;
+    padding-bottom: 2rem
+  .team__item
+    width: 30%
+    padding-bottom: 28px
+  .team__pic
+    margin-bottom: 10px
+  .team__name
+    font-size: 12px;
 
+  .team__position
+    font-size: 10px;
+    color: #677897;
+  .b_team
+    .btn-wrap
+      display: none
+  .blog__item
+    height: 70px
+  .footer__menu
+    padding: 0
 
+  .footer__col--small
+    display: none
+  .footer__col--big
+    flex-direction: column-reverse
 
+  .menu-site
+    display: none
+  .footer__col--big
+    width: 100%
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  .footer__logo
+    align-self: auto;
+    padding-top: 20px
+  footer
+    padding-top: 58px
+    padding-bottom: 25px
