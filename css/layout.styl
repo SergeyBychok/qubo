@@ -112,16 +112,19 @@ header
   padding-right: 70px;
   height: 159px
   content ''
+
 .chat__content
   width: 98%
 
 .chat__item
   width: 100%
+
 .chat__item:after
   display: block
   content: ''
   height: 1px
   flex 1 auto
+
 .chat__item--qubo
   display: flex
   span
@@ -167,8 +170,7 @@ header
     position: relative
     margin-top: 6px
     box-shadow: 0 14px 14px 0 rgba(197, 226, 255, 1);
-    animation: opacity .1s 2.2s forwards
-    opacity 0
+    // animation: opacity .1s 2.2s forwards
     min-height: 61px
     max-width 80%
     &:before
@@ -547,6 +549,7 @@ body.open-modal
     justify-content center
     align-items center
     overflow-y scroll
+
 .b_breadcrumbs
   display: none
 
@@ -557,17 +560,23 @@ body.open-modal
 @media (max-width 1200px)
   .content
     width: 760px
+
   .menu__link
     margin-left: 28px;
+
   .main__video-block
     width: 100%;
     background-repeat no-repeat
+
   .value__cols
     padding: 0
+
   .calculate__wrap
     padding: 65px 30px
+
   html
     font-size 12px
+
   .team__item
     padding-bottom: 35px
 
@@ -575,6 +584,7 @@ body.open-modal
   .content
     width: 300px
     outline: 1px solid #0f2e6b
+
   .header-logo
     opacity 1
 
@@ -610,12 +620,15 @@ body.open-modal
     font-size: 34px;
     color: #FFFFFF;
     line-height: 35.5px;
+
   .mail__logo
     width: 178px
+
   .main__text
     font-size: 14px;
     color: #FFFFFF;
     line-height: 20px;
+
   .chat__wrap
     width: 100%
     padding: 0
@@ -624,76 +637,95 @@ body.open-modal
     font-weight: lighter
     font-size: 18.06px;
     letter-spacing: -0.39px;
+
   .chat__item--qubo span
     margin-left: 15px
+
   .main__video-block
     background none
+
   .chat__content
     display: none
+
   .main__video-link
     max-width 256px
     height: 51px
+
   .main__video-link img
     width: 57px
+
   .main__video-link--text
     padding-top: 11px
     font-weight: 500
     font-size: 18px;
+
   .value__cols
     flex-direction column
+
   .value__col:first-child
     margin: 0 auto
     width: 135px
     padding-top: 55px
     img
       width: 100%
+
   .value__col:last-child
     width: 100%
     padding-top: 35px
+
   .value__item
     width: 33%
+
   .value__title
     position: absolute;
     text-align: center;
     top: -209px;
     width: 100%;
+
   .value__svg
     width: 58px
-
 
   .value__text
     font-weight: lighter
     font-size: 14px;
-    color: rgba(36,36,36,0.80);
+    color: rgba(36, 36, 36, 0.80);
     letter-spacing: 0;
     line-height: 17.92px;
+
   .tabs__control
     width: 100%
+
   .calculate__wrap--second
     .calculate__cols
       flex-direction column-reverse
     .calculate__col:last-child
       padding-bottom: 40px
+
   .calculate__cols
     flex-direction column
+
   .calculate__wrap--first
     .calculate__col
       padding-bottom: 40px
     .calculate__cols
       padding-bottom: 0
+
   #range-container
     display: block
     input[type="range"][multiple]
       display inline-block
+
   div[class^="outWrap_"]
     position: static
     width: 100%
     margin: 0
     margin-bottom: 20px
     text-align left
+
   div[class^="outWrap_"] span
     display: inline-block
     padding-top: 0
+
   .outWrap_0 span, .outWrap_2 span, .outWrap_4 span
     float: left
     padding-right: 5px
@@ -701,81 +733,129 @@ body.open-modal
   .calculate__range-wrap
     margin: 0
     padding-bottom: 0
+
   .calculate__col
     width: 100%
     padding: 0
+
   .calculate__result-mob
     font-size 24px
+
   .saving__block
     width: 100%
+
   .saving__title
     font-size: 24px;
     text-align left
     padding-top: 0
+
   .saving__result, .saving__result.opt
     font-weight: lighter
     font-size: 20px;
+
   .saving-bar
     height: 6px
+
   .saving-bar span
     height: 6px
+
   .architecture__mob-pic
     display: block
     background: #046FD7;
-    box-shadow: 0 15px 45px 0 rgba(23,128,224,0.73);
+    box-shadow: 0 15px 45px 0 rgba(23, 128, 224, 0.73);
     max-width 400px
     margin: 0 auto
     padding-top: 20px
     padding-bottom: 20px
+
   .architecture__wrap
     display: none
+
   .b_architecture
     height: auto
     background none
     box-shadow none
+
   .architecture__title
     font-size: 24px;
     color: #046FD7;
     text-align left
     padding-bottom: 1rem
+
   .architecture__sub-title
     margin: 0
     font-size: 16px;
-    color: rgba(36,36,36,0.80);
+    color: rgba(36, 36, 36, 0.80);
     line-height: 26px;
     padding-bottom: 2rem
+
   .team__item
     width: 30%
     padding-bottom: 28px
+
   .team__pic
     margin-bottom: 10px
+
   .team__name
     font-size: 12px;
 
   .team__position
     font-size: 10px;
     color: #677897;
+
   .b_team
     .btn-wrap
       display: none
+
   .blog__item
     height: 70px
+
   .footer__menu
     padding: 0
 
   .footer__col--small
     display: none
+
   .footer__col--big
     flex-direction: column-reverse
 
   .menu-site
     display: none
+
   .footer__col--big
     width: 100%
 
   .footer__logo
     align-self: auto;
     padding-top: 20px
+
   footer
     padding-top: 58px
     padding-bottom: 25px
+
+.showBlock
+  .gear_svg
+    transform-origin: 36.5px 37.5px;
+    opacity 0
+    animation: svgRot 1s forwards
+    transform: rotate(360deg);
+    &.second
+      transform-origin: -0.5px 28.5px
+  .gear_svg-point
+    opacity 0
+    animation: opacity 1s 1s forwards
+
+
+@keyframes svgRot {
+  0% {
+    opacity 0;
+  }
+  20% {
+    opacity 1
+    transform: rotate(360deg);
+  }
+  100% {
+    opacity 1
+    transform rotate(0deg)
+  }
+}
