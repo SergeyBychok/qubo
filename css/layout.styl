@@ -246,11 +246,23 @@ header
   text-align center
   display: block
   margin: 0 auto
-  animation: videoAnimate .6s 4.5s forwards
+  @media(min-width 767px)
+    animation: videoAnimate .6s 4.5s forwards
   img
     float right
     padding: 10px 14px;
-    animation: videoAnimatePic .6s 4.5s forwards
+    @media(min-width 767px)
+      animation: videoAnimatePic .6s 4.5s forwards
+
+.main__video-link--text
+  color: #046FD7
+  line-height: 26.5px
+  padding-top: 24px
+  display inline-block
+  font-size 0
+  opacity 0
+  @media(min-width 767px)
+    animation: videoAnimateText .6s 5.1s forwards
 
 @keyframes videoAnimate {
   0% {
@@ -282,15 +294,6 @@ header
 
   }
 }
-
-.main__video-link--text
-  color: #046FD7
-  line-height: 26.5px
-  padding-top: 24px
-  display inline-block
-  font-size 0
-  opacity 0
-  animation: videoAnimateText .6s 5.1s forwards
 
 .b_value
   padding-top: 42px
@@ -583,11 +586,13 @@ body.open-modal
 @media (max-width 767px)
   .content
     width: 300px
-    outline: 1px solid #0f2e6b
-
+  .header_mob-group
+    display: flex
+    align-items center
   .header-logo
     opacity 1
-
+  .header-logo
+    margin-top: 0
   .mob__open-menu
     width: 24px
     height: 2px
@@ -595,23 +600,37 @@ body.open-modal
     display: block
     content: ''
     position: relative
+    margin-top: 11px
+    cursor: pointer
     &:before
       position: absolute
-      top: -10px;
+      top: -15px;
       width: 100%
       height: 2px
-      background-color red
+      background-color #fff
       display: block
       content: ''
     &:after
       position: absolute
-      top: -5px;
+      top: -7px;
       width: 70%
       height: 2px
-      background-color black
+      background-color #fff
       display: block
       content: ''
-
+  .mob__video-link
+    display: block
+    width: 33px
+    height: 33px
+    margin-right: 20px
+    svg
+      width: 100%
+    .svg-play
+      fill #fff
+  .b_main
+    padding-bottom: 0
+    &:after
+      background: linear-gradient(-6deg, #fff 27%, transparent 27%);
   .menu__list
     display: none
 
@@ -620,6 +639,8 @@ body.open-modal
     font-size: 34px;
     color: #FFFFFF;
     line-height: 35.5px;
+    position: relative
+    z-index 5
 
   .mail__logo
     width: 178px
@@ -628,27 +649,34 @@ body.open-modal
     font-size: 14px;
     color: #FFFFFF;
     line-height: 20px;
+    padding-bottom: 0
+    position: relative
+    z-index 5
 
   .chat__wrap
     width: 100%
     padding: 0
 
   .chat__item span
+    padding: 7px
+    font-size 14px
     font-weight: lighter
-    font-size: 18.06px;
-    letter-spacing: -0.39px;
+  .chat__item--user span
+    min-height: 32px
 
   .chat__item--qubo span
     margin-left: 15px
-
+  .chat__pic
+    width: 30px
+    height: 30px
+    margin-top: 10px
   .main__video-block
     background none
-
-  .chat__content
-    display: none
+    height: auto
 
   .main__video-link
     max-width 256px
+    width: 100%
     height: 51px
 
   .main__video-link img
@@ -658,6 +686,7 @@ body.open-modal
     padding-top: 11px
     font-weight: 500
     font-size: 18px;
+    opacity 1
 
   .value__cols
     flex-direction column
