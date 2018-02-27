@@ -1353,11 +1353,13 @@ body.open-modal .modal__video {
   color: #fff;
   line-height: 55.5px;
 }
-.open-menu .mob__open-menu {
+.open-menu .mob__open-menu--link {
   position: fixed;
   z-index: 9999;
   right: 10px;
   top: 20px;
+}
+.open-menu .mob__open-menu {
   transform: rotate(45deg);
   transition: all 0.5s;
 }

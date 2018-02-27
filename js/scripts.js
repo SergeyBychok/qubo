@@ -43,12 +43,13 @@ $(document).ready(function () {
         }, 1000);
     }
 
-    body.on('click', '.mob__open-menu', function () {
-        body.addClass('open-menu')
+    body.on('click', '.mob__open-menu--link', function () {
+        body.toggleClass('open-menu')
+        return false
+
     })
 
     body.on('click', '.menu__list', function () {
-        console.log('qweqwe')
         body.removeClass('open-menu');
         return false
     })
