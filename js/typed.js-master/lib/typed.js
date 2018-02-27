@@ -602,7 +602,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    value: function load(self, options, elementId) {
 	      // chosen element to manipulate text
-			console.log(elementId)
 	      if (typeof elementId === 'string') {
 	        self.el = document.querySelector(elementId);
 	      } else {
@@ -612,8 +611,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	      self.options = _extends({}, _defaultsJs2['default'], options);
 	
 	      // attribute to type into
-			console.log('qweqwe')
-			console.log(self.el)
 	      self.isInput = self.el.tagName.toLowerCase() === 'input';
 	      self.attr = self.options.attr;
 	      self.bindInputFocusEvents = self.options.bindInputFocusEvents;

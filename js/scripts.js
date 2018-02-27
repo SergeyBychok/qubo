@@ -2,7 +2,18 @@ var body = $('body');
 
 $(document).ready(function () {
 
+    $(window).on('scroll', function () {
+        if (window.scrollY > 100) {
+            $('header').addClass('bg');
+        } else {
+            $('header').removeClass('bg');
+        }
+    });
 
+    $('.animate').addClass('hidden').viewportChecker({
+        classToAdd: 'showBlock',
+        offset: 230
+    });
 
 // modal
     body.on('click', '.main__video-link', function () {

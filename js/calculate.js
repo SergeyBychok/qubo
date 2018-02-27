@@ -17,20 +17,6 @@ $(document).ready(function () {
     })
 
 
-    $(window).on('scroll', function () {
-        if (window.scrollY > 100) {
-            $('header').addClass('bg');
-        } else {
-            $('header').removeClass('bg');
-        }
-    });
-
-    $('.animate').addClass('hidden').viewportChecker({
-        classToAdd: 'showBlock',
-        offset: 230
-    });
-
-
 // individual
     var container = $('#range-container');
 
@@ -220,12 +206,21 @@ $(document).ready(function () {
     })
 
 //if is mobile
-
-    // for (var i = 0; i < 6; i++) {
-    //     $('#range' + i).after($('.outWrap_' + i))
-    // }
-
-
+    var resizeFlag = false
+    $(window).on('resize', function () {
+        if($(document).width() < 767 && !resizeFlag){
+            resizeFlag = true
+            for (var i = 0; i < 6; i++) {
+                $('#range' + i).after($('.outWrap_' + i))
+            }
+        } else if(resizeFlag && $(document).width() > 767){
+            resizeFlag = false
+            for (var i = 0; i < 6; i++) {
+                $('.outWrap_' + i).appendTo($('.calculate__range-wrap'))
+                changeVal(i)
+            }
+        }
+    })
 })
 var industry = {
     accommodations: {

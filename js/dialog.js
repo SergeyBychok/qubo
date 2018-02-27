@@ -33,18 +33,6 @@ function some(dialogNumber, text, delay, remove) {
     }, delay)
 }
 
-
-//if is mobile
-
-// for (var i = 0; i < 6; i++) {
-//     $('#range' + i).after($('.outWrap_' + i))
-// }
-
-
-// <div class="chat__item chat__item--qubo"><img class="chat__pic" src="images/logo_small.svg"><span></span></div>
-// <div class="chat__item chat__item--user"><span></span></div>
-
-
 function randomInteger(min, max) {
     var rand = min + Math.random() * (max - min)
     rand = Math.round(rand);
