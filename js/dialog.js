@@ -20,13 +20,20 @@ function some(dialogNumber, text, delay, remove) {
     }
     setTimeout(function () {
         $(html).attr('id', ID).appendTo('.chat__content').queue(function () {
-            new Typed('#' + ID + ' span', {
-                strings: [text],
-                typeSpeed: 15,
-                startDelay: 500,
-                showCursor: false
-            })
+
+            if ($(document).width() < 767) {
+                $(this).find('span').text(text)
+            }
+            else {
+                new Typed('#' + ID + ' span', {
+                    strings: [text],
+                    typeSpeed: 15,
+                    startDelay: 500,
+                    showCursor: false
+                })
+            }
             $(this).dequeue();
+
         }).delay(remove).queue(function () {
             $('#' + ID).remove();
         })
