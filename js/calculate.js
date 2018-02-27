@@ -77,7 +77,7 @@ $(document).ready(function () {
         var length = (values.length - 1) - index;
 
         if (position > width - itemWidth * length) {
-            console.log('dont has move')
+            // console.log('dont has move')
             return false;
         }
 
@@ -102,7 +102,7 @@ $(document).ready(function () {
                 //var nValue = ( (width - (width/100)*length) )/ (width/100);
                 var nValue = (width - (itemWidth * length)) / (width / 100);
 
-                console.log('checkIfHasMove', nValue)
+                // console.log('checkIfHasMove', nValue)
                 $(this).val(nValue)
             }
 
@@ -224,6 +224,7 @@ $(document).ready(function () {
     // for (var i = 0; i < 6; i++) {
     //     $('#range' + i).after($('.outWrap_' + i))
     // }
+
 
 })
 var industry = {
