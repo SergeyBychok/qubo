@@ -33,9 +33,9 @@ function some(dialogNumber, text, delay, remove) {
                 })
             }
             $(this).dequeue();
-
         }).delay(remove).queue(function () {
-            $('#' + ID).remove();
+            $('#' + ID).fadeOut( "slow");
+            $(this).dequeue();
         })
     }, delay)
 }
