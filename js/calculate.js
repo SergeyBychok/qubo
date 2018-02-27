@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
 
     // new js
@@ -207,20 +206,30 @@ $(document).ready(function () {
 
 //if is mobile
     var resizeFlag = false
+
     $(window).on('resize', function () {
-        if($(document).width() < 767 && !resizeFlag){
+        checkMobile()
+    })
+    checkMobile()
+
+    function checkMobile() {
+        if ($(document).width() < 767 && !resizeFlag) {
             resizeFlag = true
+
+            $('select').niceSelect('destroy');
             for (var i = 0; i < 6; i++) {
                 $('#range' + i).after($('.outWrap_' + i))
             }
-        } else if(resizeFlag && $(document).width() > 767){
+        } else if (resizeFlag && $(document).width() > 767) {
             resizeFlag = false
+
+            $('select').niceSelect();
             for (var i = 0; i < 6; i++) {
                 $('.outWrap_' + i).appendTo($('.calculate__range-wrap'))
                 changeVal(i)
             }
         }
-    })
+    }
 })
 var industry = {
     accommodations: {

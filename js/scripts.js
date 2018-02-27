@@ -28,6 +28,6 @@ $(document).ready(function () {
         $('body').removeClass('open-modal');
     })
 
-    $('select').niceSelect();
+
 })
 
