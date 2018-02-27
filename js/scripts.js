@@ -10,13 +10,14 @@ $(document).ready(function () {
         }
     });
 
+    var offset = $(document).width() < 767 ? 30 : 230
     $('.animate').addClass('hidden').viewportChecker({
         classToAdd: 'showBlock',
-        offset: 230
+        offset: offset
     });
 
 // modal
-    body.on('click', '.main__video-link', function () {
+    body.on('click', '.main__video-link, .mob__video-link', function () {
         $('body').addClass('open-modal');
         return false
     })
@@ -29,17 +30,29 @@ $(document).ready(function () {
     })
     $('select').niceSelect();
 
-    $("a[href^='#']").on("click", function(e) {
+    $('a[href^=\'#\']').on('click', function (e) {
         e.preventDefault();
-        $("html, body").animate({
-            scrollTop: $($(this).attr("href")).offset().top - 60
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top - 60
         }, 1000);
     });
 
     if ($(window.location.hash).length > 1) {
-        $("html, body").animate({
+        $('html, body').animate({
             scrollTop: $(window.location.hash).offset().top - 60
         }, 1000);
     }
+
+    body.on('click', '.mob__open-menu', function () {
+        body.addClass('open-menu')
+    })
+
+    body.on('click', '.menu__list', function () {
+        console.log('qweqwe')
+        body.removeClass('open-menu');
+        return false
+    })
+
+
 })
 

@@ -218,7 +218,7 @@ header.bg .header-logo {
 }
 @media (min-width: 767px) {
   .main__video-link {
-    animation: videoAnimate 0.6s 4.5s forwards;
+    animation: videoAnimate 0.6s 16s forwards;
   }
 }
 .main__video-link img {
@@ -227,7 +227,7 @@ header.bg .header-logo {
 }
 @media (min-width: 767px) {
   .main__video-link img {
-    animation: videoAnimatePic 0.6s 4.5s forwards;
+    animation: videoAnimatePic 0.6s 16s forwards;
   }
 }
 .main__video-link--text {
@@ -240,7 +240,7 @@ header.bg .header-logo {
 }
 @media (min-width: 767px) {
   .main__video-link--text {
-    animation: videoAnimateText 0.6s 5.1s forwards;
+    animation: videoAnimateText 0.6s 16.6s forwards;
   }
 }
 .b_value {
@@ -1299,6 +1299,26 @@ body.open-modal .modal__video {
     padding-top: 58px;
     padding-bottom: 25px;
   }
+  .b_calculate {
+    padding-top: 0;
+  }
+  select {
+    font-weight: lighter;
+    font-size: 22px;
+    color: #677897;
+    letter-spacing: -0.34px;
+    border: 1px solid #8db9e5;
+    border-radius: 40px;
+    width: 100%;
+    margin-bottom: 20px;
+    -webkit-appearance: none;
+    padding-left: 20px;
+    height: 45px;
+    line-height: 45px;
+  }
+  header {
+    padding-top: 10px;
+  }
 }
 .showBlock .gear_svg {
   transform-origin: 36.5px 37.5px;
@@ -1312,6 +1332,42 @@ body.open-modal .modal__video {
 .showBlock .gear_svg-point {
   opacity: 0;
   animation: opacity 1s 1s forwards;
+}
+.open-menu .menu__list {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  background-color: #0465c2;
+  z-index: 9998;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+.open-menu .menu__item {
+  display: block;
+}
+.open-menu .menu__link {
+  font-size: 34px;
+  color: #fff;
+  line-height: 55.5px;
+}
+.open-menu .mob__open-menu {
+  position: fixed;
+  z-index: 9999;
+  right: 10px;
+  top: 20px;
+  transform: rotate(45deg);
+  transition: all 0.5s;
+}
+.open-menu .mob__open-menu:before {
+  transform: rotate(-90deg);
+  top: 0;
+  transition: all 0.5s;
+}
+.open-menu .mob__open-menu:after {
+  display: none;
 }
 @-moz-keyframes opacity {
   0% {
