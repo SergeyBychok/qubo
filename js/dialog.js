@@ -1,12 +1,17 @@
 $(document).ready(function () {
-    some(1, 'Hello. Describe your problem/issue, please', 0, 2800) //4800
-    some(2, 'How to run SAP report in background?', 3000, 5000)
-    some(1, 'Do you want to read the instructions "Setting the background job in SAP ERP"?', 5000, 4000)
-    some(2, 'Yes', 8000, 3000)
-    some(1, 'Follow the link for instructions', 9000, 4000)
-    some(1, 'Has your issue been solved?', 11000, 3000)
-    some(2, 'Yes', 13000, 3000)
-    some(1, 'Closing the session', 14000, 2000)
+    function continuity() {
+        some(1, 'Hello. Describe your problem/issue, please', 0, 2800) //4800
+        some(2, 'How to run SAP report in background?', 3000, 5000)
+        some(1, 'Do you want to read the instructions "Setting the background job in SAP ERP"?', 5000, 4000)
+        some(2, 'Yes', 8000, 3000)
+        some(1, 'Follow the link for instructions', 9000, 4000)
+        some(1, 'Has your issue been solved?', 11000, 3000)
+        some(2, 'Yes', 13000, 3000)
+        some(1, 'Closing the session', 14000, 2000)
+    }
+
+    continuity()
+    setInterval(continuity, 16500);
 })
 
 function some(dialogNumber, text, delay, remove) {
