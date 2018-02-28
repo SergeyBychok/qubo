@@ -1,5 +1,3 @@
-var resizeFlag = false
-
 $(document).ready(function () {
 
     // new js
@@ -216,7 +214,7 @@ function changeVal(id) {
     that.css({left: rangeVal + '%'})
     formula()
 }
-
+var resizeFlag = false
 function checkMobile() {
     if ($(document).width() < 767 && !resizeFlag) {
         resizeFlag = true

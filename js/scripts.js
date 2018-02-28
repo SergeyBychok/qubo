@@ -22,7 +22,7 @@ $(document).ready(function () {
         return false
     })
 
-    $('body').click(function (e) {
+    $('body').on('click','.modal__video', function (e) {
         if ($(e.target).hasClass('video')) {
             return false;
         }
