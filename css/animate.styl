@@ -1,0 +1,109 @@
+@keyframes svgRot {
+  0% {
+    opacity 0;
+  }
+  20% {
+    opacity 1
+    transform: rotate(360deg);
+  }
+  100% {
+    opacity 1
+    transform rotate(0deg)
+  }
+}
+
+@keyframes hideBlock {
+  from {
+    opacity: 1;
+    transform translateY(0px);
+    max-height 100px;
+  }
+
+  to {
+    opacity: 0;
+    transform translateY(-30px);
+    max-height 0;
+
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity 0
+  }
+  100% {
+    opacity 1
+  }
+}
+
+@keyframes float {
+  0% {
+    transform rotate(0deg)
+  }
+  25% {
+    transform rotate(-5deg)
+  }
+  75% {
+    transform rotate(5deg)
+  }
+  100% {
+    transform rotate(0deg)
+  }
+}
+
+@keyframes moveYoga {
+  0% {
+    transform: translate3D(0px, 0px, 0);
+  }
+  25% {
+    transform: translate3D(-10px, 10px, -20px);
+  }
+  75% {
+    transform: translate3D(10px, 5px, 0);
+  }
+  100% {
+    transform: translate3D(0px, 0px, 0);
+  }
+}
+
+@keyframes videoAnimate {
+  0% {
+    width: 81px
+  }
+  100% {
+    width: 320px
+  }
+}
+
+@keyframes videoAnimateText {
+  0% {
+    font-size: 23.04px
+    opacity 0
+  }
+  100% {
+    font-size: 23.04px
+    opacity 1
+
+  }
+}
+
+@keyframes videoAnimatePic {
+  0% {
+    transform rotate(0)
+  }
+  100% {
+    transform rotate(360deg)
+
+  }
+}
+
+@keyframes showBlock {
+  0% {
+    opacity: 0;
+    transform translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform translateY(0px);
+  }
+}

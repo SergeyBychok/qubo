@@ -1,17 +1,7 @@
 $(document).ready(function () {
-    function continuity() {
-        some(1, 'Hello. Describe your problem/issue, please', 0, 2800) //4800
-        some(2, 'How to run SAP report in background?', 3000, 5000)
-        some(1, 'Do you want to read the instructions "Setting the background job in SAP ERP"?', 5000, 4000)
-        some(2, 'Yes', 8000, 3000)
-        some(1, 'Follow the link for instructions', 9000, 4000)
-        some(1, 'Has your issue been solved?', 11000, 3000)
-        some(2, 'Yes', 13000, 3000)
-        some(1, 'Closing the session', 14000, 2000)
-    }
 
     continuity()
-    setInterval(continuity, 16500);
+    setInterval(continuity, 13500);
 })
 
 function some(dialogNumber, text, delay, remove) {
@@ -30,8 +20,19 @@ function some(dialogNumber, text, delay, remove) {
                 $('#' + ID).remove();
             }, 300);
         })
-        // $(this).dequeue();
+        $(this).dequeue();
     }, delay)
+}
+
+function continuity() {
+    some(1, 'Hello. Describe your problem/issue, please', 0, 2800) //4800
+    some(2, 'How to run SAP report in background?', 1000, 4000)
+    some(1, 'Do you want to read the instructions "Setting the background job in SAP ERP"?', 2800, 4000)
+    some(2, 'Yes', 5500, 3000)
+    some(1, 'Follow the link for instructions', 6800, 3000)
+    some(1, 'Has your issue been solved?', 8500, 3000)
+    some(2, 'Yes', 9500, 3000)
+    some(1, 'Closing the session', 10000, 2500)
 }
 
 function randomInteger(min, max) {

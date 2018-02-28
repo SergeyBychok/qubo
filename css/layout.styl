@@ -1,3 +1,5 @@
+@import "./animate.styl"
+
 html, body
   width: 100%
   height: 100%
@@ -55,292 +57,10 @@ header
 
 .menu__item
   display: inline
+@import "./main.styl"
 
-.b_main
-  text-align center
-  background-color #046fd7
-  background-image url("../images/bg.jpg")
-  background-repeat: no-repeat
-  background-position: left top
-  background-size cover
-  padding-top: 113px
-  padding-bottom: 60px
-  color: #fff
-  position: relative
-  &:after
-    width: 100%
-    height: 580px
-    display: block
-    background-color #00eaf8
-    content: ''
-    position: absolute
-    bottom 0px
-    background: linear-gradient(-6deg, #fff 50%, transparent 50%);
 
-.mail__logo
-  padding-bottom: 26px
-  opacity 0
-  animation: opacity .4s .1s forwards
-  position: relative
-  z-index 5
-
-.main__title
-  color: #FFFFFF
-  font-size: 80px
-  font-weight: 300
-  line-height: 103px
-  padding-bottom: 22px
-  opacity 0
-  animation: opacity .4s .5s forwards
-
-.main__text
-  color: #FFFFFF
-  font-size: 18px
-  line-height: 28px
-  max-width 700px
-  padding-bottom: 70px
-  margin 0 auto
-  opacity 0
-  animation: opacity .4s .7s forwards
-
-.chat__wrap
-  width: 595px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 3;
-  text-align: left;
-  padding-right: 70px;
-  height: 159px
-  content ''
-
-.chat__content
-  width: 98%
-
-.chat__item
-  width: 100%
-
-.chat__item:after
-  display: block
-  content: ''
-  height: 1px
-  flex 1 auto
-
-.chat__item--qubo
-  display: flex
-  span
-    background: #FFFFFF
-    border-radius: 28.51px
-    font-size: 19.01px
-    color: #151C1B
-    letter-spacing: -0.41px
-    position: relative
-    display: flex
-    align-items center
-    padding: 19px 14px
-    margin-left: 20px
-    margin-top: 8px
-    box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.19);
-    max-width 80%
-    &:before
-      position: absolute
-      left: -12px;
-      bottom: -19px;
-      width: 31px;
-      height: 41px;
-      background-image url("../images/quote.png")
-      background-size contain
-      background-position top left
-      background-repeat no-repeat
-      display: block
-      content: ''
-
-.chat__pic
-  animation: float .8s 2
-
-.chat__item--user
-  display flex
-  flex-direction: row-reverse;
-  span
-    background: #81BDF7
-    border-radius: 30px 30px 20px 30px
-    font-size: 19.01px
-    color: #FFFFFF
-    letter-spacing: -0.41px
-    padding: 19px 14px
-    position: relative
-    margin-top: 6px
-    box-shadow: 0 14px 14px 0 rgba(197, 226, 255, 1);
-    min-height: 61px
-    max-width 80%
-    &:before
-      position: absolute
-      right: -17px;
-      bottom: -19px;
-      width: 36px;
-      height: 44px;
-      background-image url("../images/quote-blue.png")
-      background-size contain
-      background-position top left
-      background-repeat no-repeat
-      display: block
-      content: ''
-
-@keyframes opacity {
-  0% {
-    opacity 0
-  }
-  100% {
-    opacity 1
-  }
-}
-
-@keyframes float {
-  0% {
-    transform rotate(0deg)
-  }
-  25% {
-    transform rotate(-5deg)
-  }
-  75% {
-    transform rotate(5deg)
-  }
-  100% {
-    transform rotate(0deg)
-  }
-}
-
-@keyframes moveYoga {
-  0% {
-    transform: translate3D(0px, 0px, 0);
-  }
-  25% {
-    transform: translate3D(-10px, 10px, -20px);
-  }
-  75% {
-    transform: translate3D(10px, 5px, 0);
-  }
-  100% {
-    transform: translate3D(0px, 0px, 0);
-  }
-}
-
-.main__video-block
-  width: 856px
-  height: 181px
-  margin: 0 auto
-  position: relative
-  top: -14px
-  background-image url("../images/phone.png")
-  background-size contain
-  background-position center
-  padding-top: 30px
-  box-sizing border-box
-  z-index 2
-
-.main__video-link
-  border: 1px solid #046FD7
-  border-radius: 115.2px
-  height: 71px
-  width: 81px
-  text-align center
-  display: block
-  margin: 0 auto
-  @media (min-width 767px)
-    animation: videoAnimate .6s 16s forwards
-  img
-    float right
-    padding: 10px 14px;
-    @media (min-width 767px)
-      animation: videoAnimatePic .6s 16s forwards
-
-.main__video-link--text
-  color: #046FD7
-  line-height: 26.5px
-  padding-top: 24px
-  display inline-block
-  font-size 0
-  opacity 0
-  @media (min-width 767px)
-    animation: videoAnimateText .6s 16.6s forwards
-
-    @keyframes videoAnimate {
-      0% {
-        width: 81px
-      }
-      100% {
-        width: 320px
-      }
-    }
-
-    @keyframes videoAnimateText {
-      0% {
-        font-size: 23.04px
-        opacity 0
-      }
-      100% {
-        font-size: 23.04px
-        opacity 1
-
-      }
-    }
-
-    @keyframes videoAnimatePic {
-      0% {
-        transform rotate(0)
-      }
-      100% {
-        transform rotate(360deg)
-
-      }
-    }
-
-.b_value
-  padding-top: 42px
-  padding-bottom: 70px
-
-.value__cols
-  display: flex
-  justify-content space-between
-  padding: 0 99px 0 41px;
-
-.value__col
-  &:first-child
-    width: 317px
-    padding-top: 25px
-    animation: moveYoga 5s linear .5s infinite
-
-  &:last-child
-    width: 600px
-
-.value__title
-  font-size: 36px
-  color: #046FD7
-  padding-bottom: 22px
-
-.value__sub-title
-  font-size: 20px
-  color: rgba(36, 36, 36, 0.80)
-  line-height: 30px
-  padding-bottom: 50px
-
-.value__list
-  display: flex
-  justify-content space-between
-
-.value__item
-  width: 28%
-  text-align center
-
-.value__text
-  padding-top: 17px
-  font-size: 15.36px
-  color: rgba(36, 36, 36, 0.80)
-  line-height: 17.92px
-
-.b_calculate
-  padding-top: 90px
-  padding-bottom: 86px
-
+@import "./value.styl"
 @import "./calculate.styl"
 
 .tabs__control
@@ -405,112 +125,9 @@ header
   padding: 65px 49px
 
 @import "./architecture.styl"
-
-//
-.b_team
-  padding-top: 75px
-  padding-bottom: 92px
-
-.team__list
-  display: flex
-  flex-wrap wrap
-  justify-content space-between
-
-.team__item
-  width: 21%
-  text-align center
-  padding-bottom: 144px
-
-.team__pic
-  margin-bottom: 27px
-  border-radius 100%
-  width: 100%
-
-.team__name
-  font-size: 18px
-  color: #046FD7
-  font-weight: bold
-  padding-bottom: 10px
-
-.team__position
-  font-style italic
-  font-size: 16px
-  color: #677897
-
-.team__btn
-  height: 46px
-  line-height 46px
-  border-radius: 7px
-  background-color: #046FD7
-  color: #FFFFFF
-  font-size: 18px
-  display: inline-block
-  padding: 0 60px
-
-.b_blog
-  padding-top: 72px
-  padding-bottom: 88px
-  background-color #fff
-
-.blog__list
-  display: flex
-  justify-content space-between
-  padding-bottom: 70px
-
-.blog__item
-  width: 32%
-  height: 238px
-  background: #F6F9FD
-  box-shadow: 0 15px 45px 0 rgba(23, 128, 224, 0.21)
-  border-radius: 7px
-  background-image: linear-gradient(-45deg, #102397 0%, #187ADF 55%, #00EAF8 100%)
-
-.blog__btn
-  background-color: #FFFFFF
-  border-radius: 100px
-  font-weight: lighter
-  font-size: 16px
-  color: #0663A3
-  border: 1px solid #0663A3
-  height: 46px
-  line-height 46px
-  display: inline-block
-  padding: 0 60px
-  &:hover
-    transition all .3s
-    color: #fff
-    background-color #0663A3
-
-footer
-  padding-top: 43px
-  padding-bottom: 52px
-  background-color #F8FAFD
-
-.footer__cols
-  display: flex
-  justify-content space-between
-  align-items flex-end
-
-.footer__col--big
-  display: flex
-
-.footer__menu
-  padding-left: 117px
-
-.footer__menu-link
-  font-size: 16px
-  color: #7887A7
-  line-height: 26px
-  &--primary
-    color: #B1BBCE
-
-.footer__logo
-  align-self: flex-end
-
-.soc__link--fb:hover
-  g
-    fill #3B5998
-    transition all .3s
+@import "./team.styl"
+@import "./blog.styl"
+@import "./footer.styl"
 
 canvas
   display: block;
@@ -522,17 +139,6 @@ canvas
   transform translateY(60px);
   opacity: 0;
   animation: showBlock .3s forwards
-
-@keyframes showBlock {
-  0% {
-    opacity: 0;
-    transform translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform translateY(0px);
-  }
-}
 
 .modal__video
   display: none
@@ -552,8 +158,6 @@ body.open-modal
     align-items center
     overflow-y scroll
 
-.b_breadcrumbs
-  display: none
 
 @media (max-width 1200px)
   .content
@@ -903,20 +507,6 @@ body.open-modal
     opacity 0
     animation: opacity 1s 1s forwards
 
-@keyframes svgRot {
-  0% {
-    opacity 0;
-  }
-  20% {
-    opacity 1
-    transform: rotate(360deg);
-  }
-  100% {
-    opacity 1
-    transform rotate(0deg)
-  }
-}
-
 .open-menu
   .menu__list
     width: 100vw
@@ -956,17 +546,3 @@ body.open-modal
 .chat-animate--hide
   animation: hideBlock .3s forwards
 
-@keyframes hideBlock {
-  from {
-    opacity: 1;
-    transform translateY(0px);
-    max-height 100px;
-  }
-
-  to {
-    opacity: 0;
-    transform translateY(-30px);
-    max-height 0;
-
-  }
-}

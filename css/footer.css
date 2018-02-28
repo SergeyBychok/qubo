@@ -1,0 +1,31 @@
+footer {
+  padding-top: 43px;
+  padding-bottom: 52px;
+  background-color: #f8fafd;
+}
+.footer__cols {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.footer__col--big {
+  display: flex;
+}
+.footer__menu {
+  padding-left: 117px;
+}
+.footer__menu-link {
+  font-size: 16px;
+  color: #7887a7;
+  line-height: 26px;
+}
+.footer__menu-link--primary {
+  color: #b1bbce;
+}
+.footer__logo {
+  align-self: flex-end;
+}
+.soc__link--fb:hover g {
+  fill: #3b5998;
+  transition: all 0.3s;
+}
