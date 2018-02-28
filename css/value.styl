@@ -63,6 +63,13 @@
   for i in (1..15)
     .man-svg:nth-child({i})
       animation: manSvg 1s (i*.3)s forwards;
+  .message-svg
+    opacity 0
+  for i in (1..15)
+    .message-svg:nth-child({i})
+      animation: manSvg 1s (i*.3)s forwards;
+.architecture__graph
+  display: none!important
 
 @keyframes manSvg {
   from {

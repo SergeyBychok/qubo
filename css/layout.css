@@ -773,6 +773,57 @@ header.bg .header-logo {
 .showBlock .man-svg:nth-child(15) {
   animation: manSvg 1s 4.5s forwards;
 }
+.showBlock .message-svg {
+  opacity: 0;
+}
+.showBlock .message-svg:nth-child(1) {
+  animation: manSvg 1s 0.3s forwards;
+}
+.showBlock .message-svg:nth-child(2) {
+  animation: manSvg 1s 0.6s forwards;
+}
+.showBlock .message-svg:nth-child(3) {
+  animation: manSvg 1s 0.9s forwards;
+}
+.showBlock .message-svg:nth-child(4) {
+  animation: manSvg 1s 1.2s forwards;
+}
+.showBlock .message-svg:nth-child(5) {
+  animation: manSvg 1s 1.5s forwards;
+}
+.showBlock .message-svg:nth-child(6) {
+  animation: manSvg 1s 1.8s forwards;
+}
+.showBlock .message-svg:nth-child(7) {
+  animation: manSvg 1s 2.1s forwards;
+}
+.showBlock .message-svg:nth-child(8) {
+  animation: manSvg 1s 2.4s forwards;
+}
+.showBlock .message-svg:nth-child(9) {
+  animation: manSvg 1s 2.7s forwards;
+}
+.showBlock .message-svg:nth-child(10) {
+  animation: manSvg 1s 3s forwards;
+}
+.showBlock .message-svg:nth-child(11) {
+  animation: manSvg 1s 3.3s forwards;
+}
+.showBlock .message-svg:nth-child(12) {
+  animation: manSvg 1s 3.6s forwards;
+}
+.showBlock .message-svg:nth-child(13) {
+  animation: manSvg 1s 3.9s forwards;
+}
+.showBlock .message-svg:nth-child(14) {
+  animation: manSvg 1s 4.2s forwards;
+}
+.showBlock .message-svg:nth-child(15) {
+  animation: manSvg 1s 4.5s forwards;
+}
+.architecture__graph {
+  display: none !important;
+}
 @-moz-keyframes manSvg {
   from {
     opacity: 0;
