@@ -57,3 +57,18 @@
     animation: opacity 2s 1s forwards
   .pencil-svg
     animation: showBlock 1s forwards;
+
+  .man-svg
+    opacity 0
+  for i in (1..15)
+    .man-svg:nth-child({i})
+      animation: manSvg 1s (i*.3)s forwards;
+
+@keyframes manSvg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
