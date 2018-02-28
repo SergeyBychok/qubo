@@ -242,6 +242,110 @@ header.bg .header-logo {
   .main__video-link--text {
     animation: videoAnimateText 0.6s 16.6s forwards;
   }
+@-moz-keyframes videoAnimate {
+    0% {
+      width: 81px;
+    }
+    100% {
+      width: 320px;
+    }
+}
+@-webkit-keyframes videoAnimate {
+    0% {
+      width: 81px;
+    }
+    100% {
+      width: 320px;
+    }
+}
+@-o-keyframes videoAnimate {
+    0% {
+      width: 81px;
+    }
+    100% {
+      width: 320px;
+    }
+}
+@keyframes videoAnimate {
+    0% {
+      width: 81px;
+    }
+    100% {
+      width: 320px;
+    }
+}
+@-moz-keyframes videoAnimateText {
+    0% {
+      font-size: 23.04px;
+      opacity: 0;
+    }
+    100% {
+      font-size: 23.04px;
+      opacity: 1;
+    }
+}
+@-webkit-keyframes videoAnimateText {
+    0% {
+      font-size: 23.04px;
+      opacity: 0;
+    }
+    100% {
+      font-size: 23.04px;
+      opacity: 1;
+    }
+}
+@-o-keyframes videoAnimateText {
+    0% {
+      font-size: 23.04px;
+      opacity: 0;
+    }
+    100% {
+      font-size: 23.04px;
+      opacity: 1;
+    }
+}
+@keyframes videoAnimateText {
+    0% {
+      font-size: 23.04px;
+      opacity: 0;
+    }
+    100% {
+      font-size: 23.04px;
+      opacity: 1;
+    }
+}
+@-moz-keyframes videoAnimatePic {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes videoAnimatePic {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+@-o-keyframes videoAnimatePic {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+@keyframes videoAnimatePic {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
 }
 .b_value {
   padding-top: 42px;
@@ -1371,6 +1475,12 @@ body.open-modal .modal__video {
 .open-menu .mob__open-menu:after {
   display: none;
 }
+.chat-animate {
+  animation: showBlock 0.3s forwards;
+}
+.chat-animate--hide {
+  animation: hideBlock 0.3s forwards;
+}
 @-moz-keyframes opacity {
   0% {
     opacity: 0;
@@ -1515,110 +1625,6 @@ body.open-modal .modal__video {
     transform: translate3D(0px, 0px, 0);
   }
 }
-@-moz-keyframes videoAnimate {
-  0% {
-    width: 81px;
-  }
-  100% {
-    width: 320px;
-  }
-}
-@-webkit-keyframes videoAnimate {
-  0% {
-    width: 81px;
-  }
-  100% {
-    width: 320px;
-  }
-}
-@-o-keyframes videoAnimate {
-  0% {
-    width: 81px;
-  }
-  100% {
-    width: 320px;
-  }
-}
-@keyframes videoAnimate {
-  0% {
-    width: 81px;
-  }
-  100% {
-    width: 320px;
-  }
-}
-@-moz-keyframes videoAnimateText {
-  0% {
-    font-size: 23.04px;
-    opacity: 0;
-  }
-  100% {
-    font-size: 23.04px;
-    opacity: 1;
-  }
-}
-@-webkit-keyframes videoAnimateText {
-  0% {
-    font-size: 23.04px;
-    opacity: 0;
-  }
-  100% {
-    font-size: 23.04px;
-    opacity: 1;
-  }
-}
-@-o-keyframes videoAnimateText {
-  0% {
-    font-size: 23.04px;
-    opacity: 0;
-  }
-  100% {
-    font-size: 23.04px;
-    opacity: 1;
-  }
-}
-@keyframes videoAnimateText {
-  0% {
-    font-size: 23.04px;
-    opacity: 0;
-  }
-  100% {
-    font-size: 23.04px;
-    opacity: 1;
-  }
-}
-@-moz-keyframes videoAnimatePic {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes videoAnimatePic {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@-o-keyframes videoAnimatePic {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes videoAnimatePic {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 @-moz-keyframes showBlock {
   0% {
     opacity: 0;
@@ -1709,5 +1715,53 @@ body.open-modal .modal__video {
   100% {
     opacity: 1;
     transform: rotate(0deg);
+  }
+}
+@-moz-keyframes hideBlock {
+  from {
+    opacity: 1;
+    transform: translateY(0px);
+    max-height: 100px;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-30px);
+    max-height: 0;
+  }
+}
+@-webkit-keyframes hideBlock {
+  from {
+    opacity: 1;
+    transform: translateY(0px);
+    max-height: 100px;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-30px);
+    max-height: 0;
+  }
+}
+@-o-keyframes hideBlock {
+  from {
+    opacity: 1;
+    transform: translateY(0px);
+    max-height: 100px;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-30px);
+    max-height: 0;
+  }
+}
+@keyframes hideBlock {
+  from {
+    opacity: 1;
+    transform: translateY(0px);
+    max-height: 100px;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-30px);
+    max-height: 0;
   }
 }

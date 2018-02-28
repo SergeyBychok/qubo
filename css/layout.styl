@@ -170,7 +170,6 @@ header
     position: relative
     margin-top: 6px
     box-shadow: 0 14px 14px 0 rgba(197, 226, 255, 1);
-    // animation: opacity .1s 2.2s forwards
     min-height: 61px
     max-width 80%
     &:before
@@ -246,12 +245,12 @@ header
   text-align center
   display: block
   margin: 0 auto
-  @media(min-width 767px)
+  @media (min-width 767px)
     animation: videoAnimate .6s 16s forwards
   img
     float right
     padding: 10px 14px;
-    @media(min-width 767px)
+    @media (min-width 767px)
       animation: videoAnimatePic .6s 16s forwards
 
 .main__video-link--text
@@ -261,39 +260,39 @@ header
   display inline-block
   font-size 0
   opacity 0
-  @media(min-width 767px)
+  @media (min-width 767px)
     animation: videoAnimateText .6s 16.6s forwards
 
-@keyframes videoAnimate {
-  0% {
-    width: 81px
-  }
-  100% {
-    width: 320px
-  }
-}
+    @keyframes videoAnimate {
+      0% {
+        width: 81px
+      }
+      100% {
+        width: 320px
+      }
+    }
 
-@keyframes videoAnimateText {
-  0% {
-    font-size: 23.04px
-    opacity 0
-  }
-  100% {
-    font-size: 23.04px
-    opacity 1
+    @keyframes videoAnimateText {
+      0% {
+        font-size: 23.04px
+        opacity 0
+      }
+      100% {
+        font-size: 23.04px
+        opacity 1
 
-  }
-}
+      }
+    }
 
-@keyframes videoAnimatePic {
-  0% {
-    transform rotate(0)
-  }
-  100% {
-    transform rotate(360deg)
+    @keyframes videoAnimatePic {
+      0% {
+        transform rotate(0)
+      }
+      100% {
+        transform rotate(360deg)
 
-  }
-}
+      }
+    }
 
 .b_value
   padding-top: 42px
@@ -586,13 +585,17 @@ body.open-modal
 @media (max-width 767px)
   .content
     width: 300px
+
   .header_mob-group
     display: flex
     align-items center
+
   .header-logo
     opacity 1
+
   .header-logo
     margin-top: 0
+
   .mob__open-menu
     width: 24px
     height: 2px
@@ -618,6 +621,7 @@ body.open-modal
       background-color #fff
       display: block
       content: ''
+
   .mob__video-link
     display: block
     width: 33px
@@ -627,10 +631,12 @@ body.open-modal
       width: 100%
     .svg-play
       fill #fff
+
   .b_main
     padding-bottom: 0
     &:after
       background: linear-gradient(-6deg, #fff 27%, transparent 27%);
+
   .menu__list
     display: none
 
@@ -661,15 +667,18 @@ body.open-modal
     padding: 7px
     font-size 14px
     font-weight: lighter
+
   .chat__item--user span
     min-height: 32px
 
   .chat__item--qubo span
     margin-left: 15px
+
   .chat__pic
     width: 30px
     height: 30px
     margin-top: 10px
+
   .main__video-block
     background none
     height: auto
@@ -864,6 +873,7 @@ body.open-modal
 
   .b_calculate
     padding-top: 0
+
   select
     font-weight: lighter
     font-size: 22px;
@@ -873,12 +883,14 @@ body.open-modal
     border-radius: 40px;
     width: 100%
     margin-bottom: 20px
-    -webkit-appearance:none;
+    -webkit-appearance: none;
     padding-left: 20px
     height: 45px
     line-height 45px
+
   header
     padding-top: 10px
+
 .showBlock
   .gear_svg
     transform-origin: 36.5px 37.5px;
@@ -890,7 +902,6 @@ body.open-modal
   .gear_svg-point
     opacity 0
     animation: opacity 1s 1s forwards
-
 
 @keyframes svgRot {
   0% {
@@ -922,7 +933,7 @@ body.open-modal
     display: block
   .menu__link
     font-size: 34px;
-    color: rgba(255,255,255,1.00);
+    color: rgba(255, 255, 255, 1.00);
     line-height: 55.5px;
   .mob__open-menu--link
     position: fixed
@@ -939,4 +950,23 @@ body.open-modal
     &:after
       display: none
 
+.chat-animate
+  animation: showBlock .3s forwards
 
+.chat-animate--hide
+  animation: hideBlock .3s forwards
+
+@keyframes hideBlock {
+  from {
+    opacity: 1;
+    transform translateY(0px);
+    max-height 100px;
+  }
+
+  to {
+    opacity: 0;
+    transform translateY(-30px);
+    max-height 0;
+
+  }
+}
