@@ -139,38 +139,6 @@ $(document).ready(function () {
     })
 
 
-    function formula() {
-        var item = document.getElementById('industry').value
-        var countryEl = document.getElementById('country')
-
-        if (!industry[item] || countryEl.value.length !== 1) return false
-        var obj = industry[item]
-        var VALmanagement = Number(document.getElementById('range0').value)
-        var VALexpiriance = Number(document.getElementById('range1').value)
-        var VALinterface = Number(document.getElementById('range2').value)
-        var VALcollect = Number(document.getElementById('range3').value)
-        var VALprocess = Number(document.getElementById('range4').value)
-        var res = ((VALmanagement) * obj.management * 30 + (VALexpiriance) * obj.expertise * 50 + (VALinterface) * obj.interface * 25 + (VALcollect) * obj.collect * 20 + (VALprocess) * obj.process * 30) * 0.000040
-        if (countryEl.value.length == 1 && countryEl.value == 1) {
-            res = 0.7 * res;
-        }
-        document.getElementById('result').innerHTML = Math.round(res * 10) / 10
-    }
-
-    function changeVal(id) {
-        id = +id
-        var that = $('.outWrap_' + id)
-        var rangeVal = $('#range' + id).val()
-
-        var beforeVal = +$('#range' + (id - 1)).val() || 0
-        var nextVal = +$('#range' + (id + 1)).val() || 0
-
-        $('#rangeout_' + (id + 1)).text(Math.round(nextVal - rangeVal))
-        that.find('output').text(Math.round(rangeVal - beforeVal))
-        that.css({left: rangeVal + '%'})
-        formula()
-    }
-
 
     body.on('change', 'select', function () {
         formula()
@@ -211,28 +179,65 @@ $(document).ready(function () {
     })
     checkMobile()
 
-    function checkMobile() {
-        if ($(document).width() < 767 && !resizeFlag) {
-            resizeFlag = true
 
-            $('select').niceSelect('destroy');
-            for (var i = 0; i < 6; i++) {
-                $('#range' + i).after($('.outWrap_' + i))
-            }
-        } else if (resizeFlag && $(document).width() > 767) {
-            resizeFlag = false
+})
 
-            $('select').niceSelect();
-            for (var i = 0; i < 6; i++) {
-                $('.outWrap_' + i).appendTo($('.calculate__range-wrap'))
-                changeVal(i)
-            }
+function formula() {
+    var item = document.getElementById('industry').value
+    var countryEl = document.getElementById('country')
+
+    if (!industry[item] || countryEl.value.length !== 1) return false
+    var obj = industry[item]
+    var VALmanagement = Number(document.getElementById('range0').value)
+    var VALexpiriance = Number(document.getElementById('range1').value)
+    var VALinterface = Number(document.getElementById('range2').value)
+    var VALcollect = Number(document.getElementById('range3').value)
+    var VALprocess = Number(document.getElementById('range4').value)
+    var res = ((VALmanagement) * obj.management * 30 + (VALexpiriance) * obj.expertise * 50 + (VALinterface) * obj.interface * 25 + (VALcollect) * obj.collect * 20 + (VALprocess) * obj.process * 30) * 0.000040
+    if (countryEl.value.length == 1 && countryEl.value == 1) {
+        res = 0.7 * res;
+    }
+    document.getElementById('result').innerHTML = Math.round(res * 10) / 10
+}
+
+
+function changeVal(id) {
+    id = +id
+    var that = $('.outWrap_' + id)
+    var rangeVal = $('#range' + id).val()
+
+    var beforeVal = +$('#range' + (id - 1)).val() || 0
+    var nextVal = +$('#range' + (id + 1)).val() || 0
+
+    $('#rangeout_' + (id + 1)).text(Math.round(nextVal - rangeVal))
+    that.find('output').text(Math.round(rangeVal - beforeVal))
+    that.css({left: rangeVal + '%'})
+    formula()
+}
+
+function checkMobile() {
+    if ($(document).width() < 767 && !resizeFlag) {
+        resizeFlag = true
+
+        $('select').niceSelect('destroy');
+        for (var i = 0; i < 6; i++) {
+            $('#range' + i).after($('.outWrap_' + i))
+        }
+    } else if (resizeFlag && $(document).width() > 767) {
+        resizeFlag = false
+
+        $('select').niceSelect();
+        for (var i = 0; i < 6; i++) {
+            $('.outWrap_' + i).appendTo($('.calculate__range-wrap'))
+            changeVal(i)
         }
     }
-})
-function numberWithSpaces(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 }
+
+function numberWithSpaces(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+}
+
 var industry = {
     accommodations: {
         countryFirst: 8.25,
