@@ -42,3 +42,18 @@
   color: rgba(36, 36, 36, 0.80)
   line-height: 17.92px
 
+.pencil-svg
+  transform translateY(45px)
+.showBlock
+  .gear_svg
+    transform-origin: 36.5px 37.5px;
+    opacity 0
+    animation: svgRot 2s forwards
+    transform: rotate(360deg);
+    &.second
+      transform-origin: -0.5px 28.5px
+  .gear_svg-point
+    opacity 0
+    animation: opacity 2s 1s forwards
+  .pencil-svg
+    animation: showBlock 1s forwards;

@@ -176,7 +176,6 @@ $(document).ready(function () {
         formula()
     })
 
-
 // business
 
     var businessCalc = function () {
@@ -193,12 +192,12 @@ $(document).ready(function () {
         }
         resPess = Math.round(resPess)
         var resOpt = resPess * 4;
+        $('.saving__block').fadeTo(300, 1)
+        $('.saving__result.opt').text('$ ' + numberWithSpaces(resOpt))
+        $('.saving__result.pess').text('$ ' + numberWithSpaces(resPess))
+        $('.saving-bar').find('span').css({width: (100 * ((resOpt - resPess) / resOpt)) + '%'})
 
-        $('.saving__result.opt').text('$ ' + resOpt)
-        $('.saving__result.pess').text('$ ' + resPess)
-        $('.saving-bar').find('span').css({width: (100 * resOpt / 1701962020) + '%'})
     }
-
 
     body.on('change', '#industry-business, #country-business, .range-secondary', function () {
         businessCalc()
@@ -231,6 +230,9 @@ $(document).ready(function () {
         }
     }
 })
+function numberWithSpaces(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
 var industry = {
     accommodations: {
         countryFirst: 8.25,
