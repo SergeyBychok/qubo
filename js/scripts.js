@@ -28,6 +28,7 @@ $(document).ready(function () {
         }
         $('body').removeClass('open-modal');
     })
+
     $('select').niceSelect();
 
     $('a[href^=\'#\']').on('click', function (e) {

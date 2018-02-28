@@ -1,3 +1,5 @@
+var resizeFlag = false
+
 $(document).ready(function () {
 
     // new js
@@ -172,7 +174,7 @@ $(document).ready(function () {
     })
 
 //if is mobile
-    var resizeFlag = false
+
 
     $(window).on('resize', function () {
         checkMobile()
