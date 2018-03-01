@@ -544,6 +544,9 @@ header.bg .header-logo {
 .chat__item {
   width: 100%;
 }
+.chat__item span {
+  box-shadow: 0 14px 14px 0 rgba(4,81,156,0.3);
+}
 .chat__item:after {
   display: block;
   content: '';
@@ -565,7 +568,6 @@ header.bg .header-logo {
   padding: 19px 14px;
   margin-left: 20px;
   margin-top: 8px;
-  box-shadow: 0 14px 14px 0 rgba(0,0,0,0.19);
   max-width: 80%;
 }
 .chat__item--qubo span:before {
@@ -597,7 +599,6 @@ header.bg .header-logo {
   padding: 19px 14px;
   position: relative;
   margin-top: 6px;
-  box-shadow: 0 14px 14px 0 #c5e2ff;
   min-height: 61px;
   max-width: 80%;
 }
