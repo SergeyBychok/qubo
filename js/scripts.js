@@ -22,13 +22,12 @@ $(document).ready(function () {
         return false
     })
 
-    $('body').on('click','.modal__video', function (e) {
+    $('body').on('click touch','.modal__video', function (e) {
         console.log('qweqwe')
         console.log($(e.target))
         if ($(e.target).hasClass('video')) {
             return false;
         }
-
         $('body').removeClass('open-modal');
     })
 
