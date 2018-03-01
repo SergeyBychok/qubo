@@ -18,17 +18,15 @@ $(document).ready(function () {
 
 // modal
     body.on('click', '.main__video-link, .mob__video-link', function () {
-        $('body').addClass('open-modal');
+        body.addClass('open-modal');
         return false
     })
 
-    $('body').on('click touch','.modal__video', function (e) {
-        console.log('qweqwe')
-        console.log($(e.target))
+    body.on('click touch','.modal__video', function (e) {
         if ($(e.target).hasClass('video')) {
             return false;
         }
-        $('body').removeClass('open-modal');
+        body.removeClass('open-modal');
     })
 
     $('select').niceSelect();
