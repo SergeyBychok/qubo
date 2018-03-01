@@ -18,21 +18,29 @@ $(document).ready(function () {
 
 
 // modal
-    body.on('click', '.main__video-link, .mob__video-link', function () {
-        body.addClass('open-modal');
-        console.log('qqqww')
-        return false
-    })
+
+    $(document).on('click',  function(event) {
+        event.preventDefault()
+        console.log('event')
+        console.log(event)
+
+    });
 
     console.log('xuj')
     body.on('click touched', function (e) {
-        console.log(e)
 
         // if ($(e.target).hasClass('video')) {
         //     return false;
         // }
         body.removeClass('open-modal');
     })
+
+    body.on('click', '.main__video-link, .mob__video-link', function () {
+        body.addClass('open-modal');
+        console.log('qqqww')
+        return false
+    })
+
 
     $('select').niceSelect();
 
