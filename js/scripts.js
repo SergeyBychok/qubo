@@ -11,7 +11,8 @@ $(document).ready(function () {
     });
 
     var offset = $(document).width() < 767 ? 30 : 230
-    $('.animate').addClass('hidden').viewportChecker({
+    $('.animate').viewportChecker({
+        classToRemove: 'hidden',
         classToAdd: 'showBlock',
         offset: offset
     });
