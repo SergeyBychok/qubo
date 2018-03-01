@@ -23,9 +23,9 @@ $(document).ready(function () {
     })
 
     body.on('click touch','.modal__video', function (e) {
-        if ($(e.target).hasClass('video')) {
-            return false;
-        }
+        // if ($(e.target).hasClass('video')) {
+        //     return false;
+        // }
         body.removeClass('open-modal');
     })
 
