@@ -18,16 +18,7 @@ $(document).ready(function () {
 
 
 // modal
-
-    $(document).on('touchstart',  function(event) {
-        event.preventDefault()
-        console.log('event')
-        console.log(event)
-    });
-
     body.on('click', function (e) {
-        console.log('event')
-
         if ($(e.target).hasClass('video')) {
             return false;
         }
@@ -35,8 +26,6 @@ $(document).ready(function () {
     })
 
     body.on('touchstart', function (e) {
-        console.log('event')
-
         if ($(e.target).hasClass('video')) {
             return false;
         }
