@@ -19,19 +19,27 @@ $(document).ready(function () {
 
 // modal
 
-    $(document).on('click',  function(event) {
+    $(document).on('touchstart',  function(event) {
         event.preventDefault()
         console.log('event')
         console.log(event)
-
     });
 
-    console.log('xuj')
-    body.on('click touched', function (e) {
+    body.on('click', function (e) {
+        console.log('event')
 
-        // if ($(e.target).hasClass('video')) {
-        //     return false;
-        // }
+        if ($(e.target).hasClass('video')) {
+            return false;
+        }
+        body.removeClass('open-modal');
+    })
+
+    body.on('touchstart', function (e) {
+        console.log('event')
+
+        if ($(e.target).hasClass('video')) {
+            return false;
+        }
         body.removeClass('open-modal');
     })
 
