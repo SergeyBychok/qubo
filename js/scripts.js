@@ -16,13 +16,18 @@ $(document).ready(function () {
         offset: offset
     });
 
+
 // modal
     body.on('click', '.main__video-link, .mob__video-link', function () {
         body.addClass('open-modal');
+        console.log('qqqww')
         return false
     })
 
-    body.on('click touch','.modal__video', function (e) {
+    console.log('xuj')
+    body.on('click touched', function (e) {
+        console.log(e)
+
         // if ($(e.target).hasClass('video')) {
         //     return false;
         // }

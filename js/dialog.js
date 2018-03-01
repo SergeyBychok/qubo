@@ -1,11 +1,9 @@
 $(document).ready(function () {
-
     continuity()
-    setInterval(continuity, 13500);
+    setInterval(continuity, 26000);
 })
 
 function some(dialogNumber, text, delay, remove) {
-
     var html;
     var ID = 'a' + randomInteger(1, 300);
     if (dialogNumber == 1) {
@@ -25,14 +23,23 @@ function some(dialogNumber, text, delay, remove) {
 }
 
 function continuity() {
-    some(1, 'Hello. Describe your problem/issue, please', 0, 2800) //4800
-    some(2, 'How to run SAP report in background?', 1000, 4000)
-    some(1, 'Do you want to read the instructions "Setting the background job in SAP ERP"?', 2800, 4000)
-    some(2, 'Yes', 5500, 3000)
-    some(1, 'Follow the link for instructions', 6800, 3000)
-    some(1, 'Has your issue been solved?', 8500, 3000)
-    some(2, 'Yes', 9500, 3000)
-    some(1, 'Closing the session', 10000, 2500)
+    some(1, 'Hello, how can I help?', 0, 3000)
+    some(2, 'I cannot work with the vendor bank account in the SAP system', 1000, 4000)
+    some(1, 'Can you please specify in which system you experience this issue?', 3000, 4000)
+    some(2, 'SAP ERP', 5000, 3000)
+    some(1, 'Please provide vendor account number', 7000, 2000)
+    some(2, '10000043', 8000, 2000)
+    some(1, 'Please provide bank code', 9000, 2000)
+    some(2, '300258', 10000, 2000)
+    some(1, 'Enter bank account number, please', 11000, 3000)
+    some(2, '122344', 12000, 2500)
+    some(1, 'This bank account does not exist in SAP system.', 14000, 3000)
+    some(1, 'I\'m happy to create it for you momentarily. Are you ok with this?', 14500, 3500)
+    some(2, 'Yes', 17000, 2000)
+    some(1, 'Sure, 122344 bank account was successfully created for the vendor 10000043', 18000, 4500)
+    some(1, 'Are you satisfied with my service?', 19000, 4000)
+    some(2, 'Absolutely!', 22500, 1500)
+    some(1, 'Thank you and have a great rest of the week', 23000, 3000)
 }
 
 function randomInteger(min, max) {
