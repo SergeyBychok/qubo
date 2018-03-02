@@ -1697,6 +1697,32 @@ footer {
   fill: #3b5998;
   transition: all 0.3s;
 }
+.contacts__title {
+  font-size: 16px;
+  color: #7887a7;
+  line-height: 26px;
+  font-weight: 500;
+}
+.contacts__text {
+  font-size: 16px;
+  color: #b1bbce;
+  line-height: 26px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.contacts__text a:hover {
+  color: #046fd7;
+  transition: 0.3s;
+}
+a[href^="tel"] {
+  color: inherit;
+  text-decoration: none;
+}
+@media (max-width: 1200px) {
+  .footer__menu {
+    padding-left: 80px;
+  }
+}
 canvas {
   display: block;
   vertical-align: bottom;
@@ -1734,10 +1760,16 @@ body.open-modal .modal__video {
   .content {
     width: 980px;
   }
+  html {
+    font-size: 12px;
+  }
 }
 @media (max-width: 1023px) {
   .content {
-    width: 760px;
+    width: 750px;
+  }
+  html {
+    font-size: 10px;
   }
   .menu__link {
     margin-left: 28px;
@@ -1752,11 +1784,11 @@ body.open-modal .modal__video {
   .calculate__wrap {
     padding: 65px 30px;
   }
-  html {
-    font-size: 12px;
-  }
   .team__item {
     padding-bottom: 35px;
+  }
+  header {
+    box-sizing: border-box;
   }
 }
 @media (max-width: 767px) {
