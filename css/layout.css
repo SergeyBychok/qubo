@@ -543,6 +543,7 @@ header.bg .header-logo {
 }
 .chat__item {
   width: 100%;
+  will-change: transform;
 }
 .chat__item span {
   box-shadow: 0 14px 14px 0 rgba(4,81,156,0.3);
@@ -821,9 +822,6 @@ header.bg .header-logo {
 }
 .showBlock .message-svg:nth-child(15) {
   animation: manSvg 1s 4.5s forwards;
-}
-.architecture__graph {
-  display: none !important;
 }
 @-moz-keyframes manSvg {
   from {
