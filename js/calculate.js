@@ -70,7 +70,7 @@ $(document).ready(function () {
     }
 
 
-    $('input').each(function () {
+    $('[id^="range"]').each(function () {
         //console.log($(this).attr('id'))
         var id = $(this).attr('id');
 
@@ -138,9 +138,7 @@ $(document).ready(function () {
         $(this).next('output').css({left: percent + '%'})
     })
 
-
-
-    body.on('change', 'select', function () {
+    body.on('change', '#country, #industry', function () {
         formula()
     })
 

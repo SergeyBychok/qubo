@@ -3,13 +3,16 @@ $(document).ready(function () {
     setInterval(continuity, 26000);
 })
 
+var contentQubo = '<div class="chat__item chat__item--qubo"><img class="chat__pic" src="images/logo_small.svg"></div>'
+var contentUser = '<div class="chat__item chat__item--user"></div>'
+
 function some(dialogNumber, text, delay, remove) {
     var html;
     var ID = 'a' + randomInteger(1, 300);
     if (dialogNumber == 1) {
-        html = '<div class="chat__item chat__item--qubo"><img class="chat__pic" src="images/logo_small.svg"><span>' + text + '</span></div>'
+        html = $(contentQubo).append('<span>' + text + '</span>')
     } else {
-        html = '<div class="chat__item chat__item--user"><span>' + text + '</span></div>'
+        html = $(contentUser).append('<span>' + text + '</span>')
     }
     setTimeout(function () {
         $(html).attr('id', ID).css({opacity: 0}).appendTo('.chat__content').addClass('chat-animate').delay(remove).queue(function () {

@@ -207,23 +207,27 @@ div[class^="outWrap_"]
 #industry-business + .nice-select
   margin-bottom: 30px
 
+$colorInput = #359BE0
+$colorRange = #fff
+
 MixinTrack()
   width: 100%;
   height: 6px;
   cursor: pointer;
   animate: 0.2s;
-  background: #1CBBB4;
+  background: $colorInput;
 
-MixinThumb()
+MixinThumb(color)
   box-shadow: 0 0 3px 0 rgba(0,0,0,0.10), inset 0px 0px 0px 2px #E6E8ED, inset 0px 0px 0px 6px #fff;
   //border: 2px solid #E6E8ED;
   height: 20px;
   width: 20px;
   border-radius: 10px;
-  background: #1CBBB4;
+  background: color;
   cursor: pointer;
   position relative
   top: 4px
+
 
 input[type=range] {
   -webkit-appearance: none;
@@ -231,16 +235,6 @@ input[type=range] {
 }
 input[type=range]:focus {
   outline: none;
-}
-input[type=range]::-webkit-slider-runnable-track {
-  MixinTrack()
-}
-
-input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #1CBBB4;
-}
-input[type=range]::-moz-range-track {
-  MixinTrack()
 }
 
 input[type=range]::-ms-track {
@@ -253,36 +247,116 @@ input[type=range]::-ms-track {
   border-width: 20px 0;
   color: transparent;
 }
-input[type=range]::-ms-fill-lower {
-  background: #1CBBB4;
+input[type=range]::-webkit-slider-runnable-track {
+  MixinTrack()
 }
-input[type=range]::-ms-fill-upper {
-  background: #1CBBB4;
+
+input[type=range]::-moz-range-track {
+  MixinTrack()
 }
+
 input[type=range]::-webkit-slider-thumb {
-  MixinThumb()
+  MixinThumb($colorRange)
   -webkit-appearance: none;
   margin-top: -11px;
   position: relative
   z-index 4
 }
 input[type=range]::-moz-range-thumb {
-  MixinThumb()
+  MixinThumb($colorRange)
 }
 input[type=range]::-ms-thumb {
-  MixinThumb()
+  MixinThumb($colorRange)
 }
 input[type=range]:focus::-ms-fill-lower {
-  background: #1CBBB4;
+  background: $colorInput;
 }
 input[type=range]:focus::-ms-fill-upper {
-  background: #1CBBB4;
+  background: $colorInput;
 }
-
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: $colorInput;
+}
+input[type=range]::-ms-fill-lower {
+  background: $colorInput;
+}
+input[type=range]::-ms-fill-upper {
+  background: $colorInput;
+}
 .saving__block
   opacity 0
 
 
+#range5
+  &::-webkit-slider-thumb {
+    MixinThumb(#0F2E6B)
+  }
+  &::-moz-range-thumb {
+    MixinThumb(#0F2E6B)
+  }
+  &::-ms-thumb {
+    MixinThumb(#0F2E6B)
+  }
+
+
+#range4
+  &::-webkit-slider-thumb {
+    MixinThumb(#8DB9E5)
+  }
+  &::-moz-range-thumb {
+    MixinThumb(#8DB9E5)
+  }
+  &::-ms-thumb {
+    MixinThumb(#8DB9E5)
+  }
+
+
+#range3
+  &::-webkit-slider-thumb {
+    MixinThumb(#E577CF)
+  }
+  &::-moz-range-thumb {
+    MixinThumb(#E577CF)
+  }
+  &::-ms-thumb {
+    MixinThumb(#E577CF)
+  }
+
+#range2
+  &::-webkit-slider-thumb {
+    MixinThumb(#1CBBB4)
+  }
+  &::-moz-range-thumb {
+    MixinThumb(#1CBBB4)
+  }
+  &::-ms-thumb {
+    MixinThumb(#1CBBB4)
+  }
+
+
+#range1
+  &::-webkit-slider-thumb {
+    MixinThumb(#FFAA00)
+  }
+  &::-moz-range-thumb {
+    MixinThumb(#FFAA00)
+  }
+  &::-ms-thumb {
+    MixinThumb(#FFAA00)
+  }
+
+
+
+#range0
+  &::-webkit-slider-thumb {
+    MixinThumb(#359BE0)
+  }
+  &::-moz-range-thumb {
+    MixinThumb(#359BE0)
+  }
+  &::-ms-thumb {
+    MixinThumb(#359BE0)
+  }
 
 
 
