@@ -173,14 +173,14 @@ $(document).ready(function () {
 
 //if is mobile
 
-
     $(window).on('resize', function () {
         checkMobile()
     })
     checkMobile()
 
-
 })
+
+
     // individual
 function formula() {
     var item = document.getElementById('industry').value
@@ -216,14 +216,14 @@ function changeVal(id) {
 }
 var resizeFlag = false
 function checkMobile() {
-    if ($(document).width() < 767 && !resizeFlag) {
+    if ($(document).width() < 767) {
         resizeFlag = true
 
         $('select').niceSelect('destroy');
         for (var i = 0; i < 6; i++) {
             $('#range' + i).after($('.outWrap_' + i))
         }
-    } else if (resizeFlag && $(document).width() > 767) {
+    } else if ($(document).width() > 767) {
         resizeFlag = false
 
         $('select').niceSelect();

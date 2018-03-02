@@ -9,13 +9,13 @@ $(document).ready(function () {
             $('header').removeClass('bg');
         }
     });
-
-    var offset = $(document).width() < 767 ? 30 : 230
-    $('.animate').viewportChecker({
-        classToRemove: 'hidden',
-        classToAdd: 'showBlock',
-        offset: offset
-    });
+    //
+    // var offset = $(document).width() < 767 ? 30 : 230
+    // $('.animate').viewportChecker({
+    //     classToRemove: 'hidden',
+    //     classToAdd: 'showBlock',
+    //     offset: offset
+    // });
 
 
 // modal
@@ -35,12 +35,8 @@ $(document).ready(function () {
 
     body.on('click', '.main__video-link, .mob__video-link', function () {
         body.addClass('open-modal');
-        console.log('qqqww')
         return false
     })
-
-
-    $('select').niceSelect();
 
     $('a[href^=\'#\']').on('click', function (e) {
         e.preventDefault();
