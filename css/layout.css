@@ -1166,9 +1166,6 @@ input[type=range]::-ms-fill-lower {
 input[type=range]::-ms-fill-upper {
   background: #359be0;
 }
-.saving__block {
-  opacity: 0;
-}
 #range5::-webkit-slider-thumb {
   box-shadow: 0 0 3px 0 rgba(0,0,0,0.1), inset 0px 0px 0px 2px #e6e8ed, inset 0px 0px 0px 6px #fff;
   height: 20px;
