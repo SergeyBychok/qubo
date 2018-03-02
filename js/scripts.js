@@ -8,7 +8,7 @@ $(document).ready(function () {
     addHeader()
 
     function addHeader() {
-        if (window.scrollY > 100) {
+        if (window.scrollY > 40) {
             $('header').addClass('bg');
         } else {
             $('header').removeClass('bg');

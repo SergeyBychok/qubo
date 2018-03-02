@@ -12,6 +12,9 @@ function launchParticlesJS(a,e){var i=document.querySelector("#"+a+" > canvas");
 /* @params: set the params [object, optional, default values : check particles.js] */
 
 /* config dom id (optional) + config particles params */
+
+var nb = $(document).width() < 767 ? 30 : 150;
+
 particlesJS('particles-js', {
     particles: {
         color: '#2C86DF',
@@ -19,7 +22,7 @@ particlesJS('particles-js', {
         opacity: 1,
         size: 6,
         size_random: true,
-        nb: 150,
+        nb: nb,
         line_linked: {
             enable_auto: true,
             distance: 180,
@@ -38,22 +41,7 @@ particlesJS('particles-js', {
         }
     },
     interactivity: {
-        enable: true,
-        mouse: {
-            distance: 250
-        },
-        detect_on: 'canvas', // "canvas" or "window"
-        mode: 'grab',
-        line_linked: {
-            opacity: .5
-        },
-        events: {
-            onclick: {
-                enable: true,
-                mode: 'push', // "push" or "remove" (particles)
-                nb: 4
-            }
-        }
+        enable: false
     },
     /* Retina Display Support */
     retina_detect: true
