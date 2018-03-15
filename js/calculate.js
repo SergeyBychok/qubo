@@ -70,7 +70,7 @@ $(document).ready(function () {
     }
 
 
-    $('input').each(function () {
+    $('[id^="range"]').each(function () {
         //console.log($(this).attr('id'))
         var id = $(this).attr('id');
 
@@ -138,9 +138,7 @@ $(document).ready(function () {
         $(this).next('output').css({left: percent + '%'})
     })
 
-
-
-    body.on('change', 'select', function () {
+    body.on('change', '#country, #industry', function () {
         formula()
     })
 
@@ -173,15 +171,15 @@ $(document).ready(function () {
 
 //if is mobile
 
-
     $(window).on('resize', function () {
         checkMobile()
     })
     checkMobile()
 
-
 })
 
+
+    // individual
 function formula() {
     var item = document.getElementById('industry').value
     var countryEl = document.getElementById('country')
@@ -193,7 +191,7 @@ function formula() {
     var VALinterface = Number(document.getElementById('range2').value)
     var VALcollect = Number(document.getElementById('range3').value)
     var VALprocess = Number(document.getElementById('range4').value)
-    var res = ((VALmanagement) * obj.management * 30 + (VALexpiriance) * obj.expertise * 50 + (VALinterface) * obj.interface * 25 + (VALcollect) * obj.collect * 20 + (VALprocess) * obj.process * 30) * 0.000040
+    var res = ((VALmanagement) * obj.management * 30 + (VALexpiriance - VALmanagement) * obj.expertise * 50 + (VALinterface - VALexpiriance) * obj.interface * 25 + (VALcollect - VALinterface) * obj.collect * 20 + (VALprocess - VALcollect) * obj.process * 30) * 0.000040
     if (countryEl.value.length == 1 && countryEl.value == 1) {
         res = 0.7 * res;
     }
@@ -216,14 +214,14 @@ function changeVal(id) {
 }
 var resizeFlag = false
 function checkMobile() {
-    if ($(document).width() < 767 && !resizeFlag) {
+    if ($(document).width() < 767) {
         resizeFlag = true
 
         $('select').niceSelect('destroy');
         for (var i = 0; i < 6; i++) {
             $('#range' + i).after($('.outWrap_' + i))
         }
-    } else if (resizeFlag && $(document).width() > 767) {
+    } else if ($(document).width() > 767) {
         resizeFlag = false
 
         $('select').niceSelect();

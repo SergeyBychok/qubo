@@ -13,6 +13,8 @@ body
   width: 1180px
   margin: 0 auto
   font-family 'Lato', sans-serif
+  position: relative;
+  z-index: 1;
 
 .section__title
   padding-bottom: 55px
@@ -57,6 +59,7 @@ header
 
 .menu__item
   display: inline
+
 @import "./main.styl"
 @import "./value.styl"
 @import "./calculate.styl"
@@ -158,14 +161,20 @@ body.open-modal
 
 .mob__video-link
   display: none
+
 @media (max-width 1200px)
   .content
     width: 980px
 
-@media (max-width 1200px)
-  .content
-    width: 760px
+  html
+    font-size 12px
 
+@media (max-width 1023px)
+  .content
+    width: 750px
+
+  html
+    font-size 10px
   .menu__link
     margin-left: 28px;
 
@@ -179,15 +188,16 @@ body.open-modal
   .calculate__wrap
     padding: 65px 30px
 
-  html
-    font-size 12px
 
   .team__item
     padding-bottom: 35px
+  header
+    box-sizing border-box
 
 @media (max-width 767px)
   .content
     width: 300px
+    width: 96%
 
   .header_mob-group
     display: flex
@@ -224,6 +234,11 @@ body.open-modal
       background-color #fff
       display: block
       content: ''
+
+  .chat__content
+    max-width 400px
+    width: 92%
+    margin: 0 auto
 
   .mob__video-link
     display: block
@@ -317,11 +332,17 @@ body.open-modal
   .value__item
     width: 33%
 
+  .b_value
+    padding-top: 0
+
   .value__title
     position: absolute;
     text-align: center;
-    top: -209px;
+    top: -29px;
     width: 100%;
+
+  .architecture__sub-title
+    max-width none;
 
   .value__svg
     width: 58px
@@ -404,10 +425,9 @@ body.open-modal
     display: block
     background: #046FD7;
     box-shadow: 0 15px 45px 0 rgba(23, 128, 224, 0.73);
-    max-width 400px
+    max-width 100%
     margin: 0 auto
-    padding-top: 20px
-    padding-bottom: 20px
+    padding: 4%
 
   .architecture__wrap
     display: none
@@ -476,6 +496,7 @@ body.open-modal
 
   .b_calculate
     padding-top: 0
+    padding-bottom: 0
 
   select
     font-weight: lighter
@@ -494,6 +515,11 @@ body.open-modal
   header
     padding-top: 10px
 
+  .calculate__wrap--first .calculate__col
+    padding-bottom: 15px
+
+  .calculate__text
+    padding-bottom: 15px
 
 .open-menu
   .menu__list

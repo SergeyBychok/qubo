@@ -3,44 +3,46 @@ var body = $('body');
 $(document).ready(function () {
 
     $(window).on('scroll', function () {
-        if (window.scrollY > 100) {
+        addHeader()
+    });
+    addHeader()
+
+    function addHeader() {
+        if (window.scrollY > 40) {
             $('header').addClass('bg');
         } else {
             $('header').removeClass('bg');
         }
-    });
+    }
 
-    var offset = $(document).width() < 767 ? 30 : 230
-    $('.animate').viewportChecker({
-        classToRemove: 'hidden',
-        classToAdd: 'showBlock',
-        offset: offset
-    });
+    //
+    // var offset = $(document).width() < 767 ? 30 : 230
+    // $('.animate').viewportChecker({
+    //     classToRemove: 'hidden',
+    //     classToAdd: 'showBlock',
+    //     offset: offset
+    // });
 
 
 // modal
-    body.on('click', function (e) {
-        if ($(e.target).hasClass('video')) {
-            return false;
-        }
-        body.removeClass('open-modal');
-    })
-
-    body.on('touchstart', function (e) {
-        if ($(e.target).hasClass('video')) {
-            return false;
-        }
-        body.removeClass('open-modal');
-    })
-
-    body.on('click', '.main__video-link, .mob__video-link', function () {
-        body.addClass('open-modal');
-        console.log('qqqww')
-        return false
-    })
-
-
-    $('select').niceSelect();
+//     body.on('click', function (e) {
+//         if ($(e.target).hasClass('video')) {
+//             return false;
+//         }
+//         body.removeClass('open-modal');
+//     })
+//
+//     body.on('touchstart', function (e) {
+//         if ($(e.target).hasClass('video')) {
+//             return false;
+//         }
+//         body.removeClass('open-modal');
+//     })
+//
+//     body.on('click', '.main__video-link, .mob__video-link', function () {
+//         body.addClass('open-modal');
+//         return false
+//     })
 
     $('a[href^=\'#\']').on('click', function (e) {
         e.preventDefault();
@@ -66,6 +68,19 @@ $(document).ready(function () {
         return false
     })
 
+    // new js
+    body.on('click', '.tabs__control--item', function () {
+        var that = $(this)
+        if (that.hasClass('first')) {
+            that.parent().removeClass('second').addClass('first')
+            $('.calculate__wrap').hide()
+            $('.calculate__wrap--first').show()
 
+        } else {
+            that.parent().removeClass('first').addClass('second')
+            $('.calculate__wrap').hide()
+            $('.calculate__wrap--second').show()
+        }
+    })
 })
 

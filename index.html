@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset='utf-8'>
+    <link rel="preload" href="images/logo_small.svg" as="image">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/resset-v2.css">
     <link rel="stylesheet" href="js/jquery-nice-select-1.1.0/css/nice-select.css">
@@ -14,11 +15,8 @@
     <div class="content">
         <img src="images/logo.svg" alt="" class="header-logo">
         <div class="header_mob-group">
-
-            <a href="" class="mob__video-link">
+            <!--<a href="" class="mob__video-link">
                 <svg width="33" height="33" version="1.1" viewBox="0 0 51 52" xmlns="http://www.w3.org/2000/svg">
-                    <title>Page 1</title>
-                    <desc>Created with Sketch.</desc>
                     <g transform="translate(-810 -655)" fill="none" fill-rule="evenodd">
                         <g class="svg-play" transform="translate(-88 -410)" fill="#046FD7">
                             <g transform="translate(347 896)">
@@ -29,7 +27,7 @@
                         </g>
                     </g>
                 </svg>
-            </a>
+            </a>-->
             <a href="" class="mob__open-menu--link">
                 <div class="mob__open-menu"></div>
             </a>
@@ -47,7 +45,7 @@
             </li>
             <li class="menu__item">
                 <a href="#js_team" class="menu__link">
-                    Our Team
+                    Team
                 </a>
             </li>
             <li class="menu__item">
@@ -55,21 +53,21 @@
                     Solution
                 </a>
             </li>
-            <li class="menu__item">
+           <!-- <li class="menu__item">
                 <a href="#js_blog" class="menu__link">
                     Blog
                 </a>
-            </li>
+            </li>-->
             <li class="menu__item">
-                <a href="" class="menu__link">
+                <a href="#js_footer" class="menu__link">
                     Contacts
                 </a>
             </li>
-            <li class="menu__item">
+           <!-- <li class="menu__item">
                 <a href="" class="menu__link">
                     En
                 </a>
-            </li>
+            </li>-->
         </ul>
     </div>
 </header>
@@ -107,10 +105,10 @@
             </div>
         </div>
         <div class="main__video-block">
-            <a href="" class="main__video-link">
-                <span class="main__video-link--text">How it works?</span>
+           <!-- <a href="" class="main__video-link">
+                <span class="main__video-link&#45;&#45;text">How it works?</span>
                 <img src="images/play-icon.svg">
-            </a>
+            </a>-->
         </div>
     </div>
 </section>
@@ -414,12 +412,12 @@
             </div>
             <div class="saving__block">
                 <p class="saving__title">Potential annual savings, USD</p>
-                <p class="line-right"><span class="saving__text">Optimistic</span><span class="saving__result opt">$ 100 000</span>
+                <p class="line-right"><span class="saving__text">Optimistic</span><span class="saving__result opt">$ X</span>
                 </p>
                 <div class="saving-bar">
                     <span></span>
                 </div>
-                <p><span class="saving__text">Pessimistic</span><span class="saving__result pess">$ 100 000</span></p>
+                <p><span class="saving__text">Pessimistic</span><span class="saving__result pess">$ Y</span></p>
             </div>
 
         </div>
@@ -633,7 +631,7 @@
             </div>
 
             <div class="architecture__graph"></div>
-            <div class="architecture__session">
+          <!--  <div class="architecture__session">
                 <svg width="138px" height="148px" version="1.1" viewBox="0 0 138 148" xmlns="http://www.w3.org/2000/svg"
                      xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>Group 7</title>
@@ -743,7 +741,7 @@
                         </g>
                     </g>
                 </svg>
-            </div>
+            </div>-->
             <div class="architecture__session--text">Session</div>
             <div class="architecture__detection--text">Detection</div>
             <div class="architecture__clarification--text">Clarification</div>
@@ -918,7 +916,7 @@
         </div>
     </div>
 </section>
-<section class="b_blog" id="js_blog">
+<!--<section class="b_blog" id="js_blog">
     <div class="content">
         <h2 class="section__title animate">
             Blog
@@ -940,45 +938,41 @@
             </a>
         </div>
     </div>
-</section>
-<footer class="animate">
+</section>-->
+<footer id="js_footer" class="animate">
     <div class="content">
         <div class="footer__cols">
             <div class="footer__col--big">
                 <img src="images/logo-footer.svg" alt="" class="footer__logo">
                 <ul class="footer__menu menu-site">
+
                     <li class="footer__menu-item">
                         <a href="#particles-js" class="footer__menu-link">
                             Home
                         </a>
                     </li>
                     <li class="footer__menu-item">
-                        <a href="" class="footer__menu-link">
-                            Benefits
-                        </a>
-                    </li>
-                    <li class="footer__menu-item">
-                        <a href="" class="footer__menu-link">
-                            Solution
+                        <a href="#js_value" class="footer__menu-link">
+                            Value
                         </a>
                     </li>
                     <li class="footer__menu-item">
                         <a href="#js_team" class="footer__menu-link">
-                            Our Team
+                            Team
                         </a>
                     </li>
                     <li class="footer__menu-item">
                         <a href="#js_architecture" class="footer__menu-link">
-                            Concept
+                            Solution
                         </a>
                     </li>
-                    <li class="footer__menu-item">
+                    <!--<li class="footer__menu-item">
                         <a href="#js_blog" class="footer__menu-link">
                             Blog
                         </a>
-                    </li>
+                    </li>-->
                     <li class="footer__menu-item">
-                        <a href="" class="footer__menu-link">
+                        <a href="#js_footer" class="footer__menu-link">
                             Contacts
                         </a>
                     </li>
@@ -1000,6 +994,11 @@
                         </a>
                     </li>
                 </ul>
+                <div class="footer__contacts footer__menu">
+                    <div class="contacts__title">Contacts</div>
+                    <div class="contacts__text">Reach us by email: <a href="mailto:office@qubo.ai">office@qubo.ai</a></div>
+                    <div class="contacts__text">Tel: <a href="tel:+14848895789">+14 84 8 89 57 89</a>, <a href="tel:+380952811950">+38 095 281 19 50</a></div>
+                </div>
             </div>
             <div class="footer__col--small">
                 <ul class="soc__list">
@@ -1019,16 +1018,16 @@
         </div>
     </div>
 </footer>
-<div class="modal__video">
+<!--<div class="modal__video">
     <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/lCKqp2IJoTY?rel=0&amp;showinfo=0"
             frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</div>
+</div>-->
 </body>
 <script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/Particles.js"></script>
-<script src="js/jquery.viewportchecker.js"></script>
 <script src="js/jquery-nice-select-1.1.0/js/jquery.nice-select.js"></script>
-<script src="js/calculate.js"></script>
 <script src="js/scripts.js"></script>
+<script src="js/Particles.js"></script>
+<!--<script src="js/jquery.viewportchecker.js"></script>-->
 <script src="js/dialog.js"></script>
+<script src="js/calculate.js"></script>
 </html>
